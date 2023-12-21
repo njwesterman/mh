@@ -7,7 +7,11 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'preloading',
     pathMatch: 'full',
+  },
+  {
+    path: 'preloading',
+    loadComponent: () => import('./preloading/preloading.page').then( m => m.PreloadingPage)
   },
 ];

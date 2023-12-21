@@ -1,0 +1,18 @@
+
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="./assets/temp/anim_birds.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+  <img [src]="imgSrcMouse" width='212' height='222'
+           (mouseover)="this.imgSrcMouse = './assets/temp/relic-respect-on.gif'"
+           (mouseout)="this.imgSrcMouse = './assets/temp/relic-respect-off.png'">
+  
+
+ <img [src]="imgSrc" width='212' height='222'
+           (click)="toggleSrc(imgSrc)">
+
+  <ion-button (click)="movetohome()">change route</ion-button>
+</div>
