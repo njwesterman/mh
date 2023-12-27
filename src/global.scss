@@ -29,16 +29,51 @@ body{
   display:flex; flex-direction:column; justify-content:center;
   min-height:100vh;
 
+ 
 }
 
 .container{
-position: fixed;
-width: 1240px;
+
 background-color:pink;
 border:1px solid deeppink;
+position: absolute;
+overflow: hidden;
+
+
+//fixed value width: 1240px;
+//fixed value height: 880px;
+//fixed value top: 50%;
+//fixed value left: 50%;
+//fixed value margin-top: -440px; /* Negative half of height. */
+//fixed value margin-left: -620px; /* Negative half of width. */
+
+width: 1240px;
 height: 880px;
 top: 50%;
 left: 50%;
 margin-top: -440px; /* Negative half of height. */
 margin-left: -620px; /* Negative half of width. */
+
+
+
+
+ // top: 0;
+ //bottom: 0;
+//  width: 100%;
+//  height: 100%; 
+  
+
+
+
+video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+
+}
+
 }
