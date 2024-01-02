@@ -3,17 +3,14 @@
 
 <div class='center'>
 
- <img style='margin-right:50px' [src]="imgSrcMouse" width='212' height='222'
-           (mouseover)="this.imgSrcMouse = './assets/sandbox/relic-respect-on.gif'"
-           (mouseout)="this.imgSrcMouse = './assets/sandbox/relic-respect-off.png'">
-  
+ 
 
- <img [src]="imgSrc" width='212' height='222'
+ <img [src]="imgSrc" width='212' height='222' style="margin:50px"
            (click)="toggleSrc(imgSrc)">
 
 
 <br><br>
-<p>This shows the difference between a mouse over and tap</p>
+<p>This click/press and sound effect</p>
 
   <ion-button  size='large' expand='block' (click)="movetohome()">change route</ion-button>
 

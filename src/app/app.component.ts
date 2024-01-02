@@ -10,6 +10,8 @@ import { environment } from 'src/environments/environment';
 
 
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -117,10 +119,17 @@ if(updates.isEnabled && environment.production){
     };
   }
 
+  ionViewDidLoad(): void {
+ 
+  }
+
   async initializeApp() {
     await this.platform.ready();
     //await this.localizationService.setInitialAppLanguage();
 
+  
+
+   
   }
     
 

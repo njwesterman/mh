@@ -7,6 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
+import {Howl, Howler} from 'howler';
+
 
 
 @Component({
@@ -18,6 +20,8 @@ import { NgModule } from '@angular/core';
 })
 export class PreloadingPage implements OnInit {
 
+  howl: Howl;
+
   constructor(public navCtrl: NavController) { }
 
 
@@ -28,12 +32,25 @@ export class PreloadingPage implements OnInit {
 audioPlayer.play();
 // Get the video
 
+this.howl = new Howl({
+  src: './assets/sandbox/sound1.mp3',
+  html5: true,
+  preload: true,
+  onend: () => {
+  //  this.playbackEnded = true;
+  }
+});
+
+this.howl.play();
+
+
   }
 
 
 
 
   movetohome(){
+    this.howl.stop();
     this.navCtrl.navigateRoot("/home");
   }
 }
