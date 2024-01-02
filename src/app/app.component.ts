@@ -37,51 +37,15 @@ export class AppComponent  implements OnInit {
       //    console.log('UpdateService: Checking for Updates')
       //    updates.checkForUpdate();
     //  });
-if(updates.isEnabled && environment.production){
-  
-      updates.versionUpdates.subscribe(async evt => {
-          console.log('UpdateService: versionUpdates', evt);
-          switch (evt.type) {
-              case 'VERSION_DETECTED':
-                this.versionCheck = 'Downloading Latest Version...'
-                  console.log(`Downloading new app version: ${evt.version.hash}`);
-                  break;
-              case 'VERSION_READY':
-                
-                  console.log(`Current app version: ${evt.currentVersion.hash}`);
-                  console.log(`New app version ready for use: ${evt.latestVersion.hash}`);
-                  await updates.activateUpdate();
-                 this.versionReady = true
-                 this.versionCheck = 'Ready to go!'
 
-                  location.reload();
-                  break;    
-              case 'VERSION_INSTALLATION_FAILED':
-                this.versionCheck = 'Error installing new version'
-                  console.log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
-                  break;
-              case 'NO_NEW_VERSION_DETECTED':
-                this.versionCheck = 'Ready to go!'
-                this.versionReady = true
-                  console.log("You are on the latest version");
-                  
-                  break;
-          }
-      });
-
-    //  updates.activateUpdate().then(() => {
-    //    console.log('YUP I AM RUNNING');
-    //    this.isReady = true
-  //    });
-
-
-    }
   }
 
 
   async ngOnInit() {
     await this.initializeApp();
 
+
+    this.versionReady = true;
     if(this.updates.isEnabled && environment.production){
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/ngsw-worker.js').then((registration) => {
@@ -95,7 +59,7 @@ if(updates.isEnabled && environment.production){
       });
     }
   } else{
-   // this.versionReady = true
+    this.versionReady = true
   }
 
   }
