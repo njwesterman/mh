@@ -1,9 +1,25 @@
 <div class='bg'>
 
-  <ion-button (click)="movetohome()">change route</ion-button>
 
+<div class='center'>
+
+ <img style='margin-right:50px' [src]="imgSrcMouse" width='212' height='222'
+           (mouseover)="this.imgSrcMouse = './assets/sandbox/relic-respect-on.gif'"
+           (mouseout)="this.imgSrcMouse = './assets/sandbox/relic-respect-off.png'">
+  
+
+ <img [src]="imgSrc" width='212' height='222'
+           (click)="toggleSrc(imgSrc)">
+
+
+<br><br>
+<p>This shows the difference between a mouse over and tap</p>
+
+  <ion-button  size='large' expand='block' (click)="movetohome()">change route</ion-button>
+
+</div>
 
 
  
 </div>
-<img class='river-relection' src='./assets/temp/river_relection.png'/>
+<img class='river-relection' src='./assets/sandbox/river_relection.png'/>

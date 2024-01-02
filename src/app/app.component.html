@@ -1,3 +1,56 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+
+
+
+
+<div class='mainBg' *ngIf='!versionReady'>
+
+
+
+
+
+<div class="center" style='background-color:black'>
+  
+  <h1>{{versionCheck}}</h1>
+<span class="loader"></span>  
+  
+  
+  <p>Please be patient as the website is currently undergoing initial setup and downloading necessary files. This may take a couple of minutes on the first run, but subsequent visits will be quicker.</p>
+  
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class='mainBg' *ngIf='versionReady'>
+
+<ion-router-outlet >
+
+<div class="center" style='background-color:black'>
+  <h1>Setup Complete</h1>
+  
+
+  <p>Great news! Everything has been successfully downloaded and the website is now ready for you to explore. Enjoy your experience!</p>
+  
+
+<ion-button size='large' expand='block' (click)="movetohome()">Let's Go!</ion-button>
+</div>
+
+
+
+
+</ion-router-outlet>
+
+</div>
+
 </ion-app>

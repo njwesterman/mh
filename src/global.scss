@@ -69,3 +69,47 @@ video {
 }
 
 }
+
+
+.mainBg {
+  /* The image used */
+  background-image: url("../src/assets/sandbox/bg_rainforest.png");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center center;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.center {
+  border: 5px solid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ // background-color:#1F354C;
+ background:transparent;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 100%;
+  display:block;
+  height: 20px;
+  background: 
+    linear-gradient(#25b09b 0 0) left -40px top 0/40px 20px,
+    linear-gradient(#ddd 0 0) center/100% 50%; 
+  background-repeat: no-repeat;
+  animation: l5 1s infinite linear;
+}
+@keyframes l5 {
+  100% {background-position: right -40px top 0,center}
+}

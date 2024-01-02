@@ -15,7 +15,8 @@ import { NgModule } from '@angular/core';
 })
 export class HomePage {
   constructor(public navCtrl: NavController) { }
-
+  imgSrc = './assets/sandbox/relic-respect-off.png'
+  imgSrcMouse = './assets/sandbox/relic-respect-off.png'
   ionviewdidenter(){
 
   }
@@ -24,5 +25,12 @@ export class HomePage {
     this.navCtrl.navigateRoot("/preloading");
   }
 
+  toggleSrc(currentImage){
+    if( this.imgSrc === './assets/sandbox/relic-respect-off.png'){
+      this.imgSrc  = './assets/sandbox/relic-respect-on.gif'
+    } else {
+      this.imgSrc = './assets/sandbox/relic-respect-off.png'
+    }
+      }
 
 }
