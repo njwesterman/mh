@@ -6,6 +6,8 @@ import { Back, Power1} from 'gsap'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {Howl, Howler} from 'howler';
+import { TweenMax } from 'gsap';
+
 
 @Component({
   selector: 'app-home',

@@ -38,11 +38,13 @@
 <ion-router-outlet >
 
 <div class="center" style='background-color:black'>
+  
+  <div *ngIf="isServiceWorkerRunning">
   <h1>Setup Complete</h1>
-  
+  <p >Great news! Everything has been successfully downloaded and the website is now ready for you to explore. Enjoy your experience!</p>
+  </div>
 
-  <p>Great news! Everything has been successfully downloaded and the website is now ready for you to explore. Enjoy your experience!</p>
-  
+   
 
 <ion-button size='large' expand='block' (click)="movetohome()">Let's Go!</ion-button>
 </div>

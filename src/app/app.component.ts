@@ -1,6 +1,6 @@
 import { ApplicationRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { IonApp, IonRouterOutlet, NavController, IonButton } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet, NavController, IonButton, isPlatform } from '@ionic/angular/standalone';
 import { Platform } from '@ionic/angular';
 import { CommonModule } from '@angular/common';  
 
@@ -24,7 +24,8 @@ export class AppComponent  implements OnInit {
 
   versionReady = false;
   versionCheck = 'Initiating...'
-  
+ isDesktop = false;
+ isServiceWorkerRunning = false;
 
   serviceWorkerReady = 'Checking for Service Worker'
 
@@ -33,14 +34,17 @@ export class AppComponent  implements OnInit {
     ) {
       console.log('UpdateService: Constructor', updates.isEnabled);
 
-
+      if((!isPlatform('ios') && !isPlatform('android')) && (!isPlatform('capacitor') || isPlatform('mobileweb') || isPlatform('desktop'))){
+        this.isDesktop = true
+      }
+    
       // This shouldn't be necessary but is a try to get the versionUpdates. Doesn't do it either.
      // interval(10000).subscribe(() => {
       //    console.log('UpdateService: Checking for Updates')
       //    updates.checkForUpdate();
     //  });
-if(updates.isEnabled && environment.production){
-  
+if(updates.isEnabled && environment.production && this.isDesktop){
+  this.isServiceWorkerRunning = true;
       updates.versionUpdates.subscribe(async evt => {
           console.log('UpdateService: versionUpdates', evt);
           switch (evt.type) {
@@ -84,9 +88,12 @@ if(updates.isEnabled && environment.production){
   async ngOnInit() {
     await this.initializeApp();
 
-    if(this.updates.isEnabled && environment.production){
+    if(this.updates.isEnabled && environment.production && this.isDesktop){
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/ngsw-worker.js').then((registration) => {
+      navigator.serviceWorker.register('/ngsw-worker.js').then((registration) => 
+      
+      {
+        console.log(registration);
         registration.installing; // the installing worker, or undefined
         registration.waiting; // the waiting worker, or undefined
         registration.active; // the active worker, or undefined
@@ -98,11 +105,16 @@ if(updates.isEnabled && environment.production){
     }
   } else{
     this.versionReady = true
+
+  
   }
+
+  
 
   }
 
   updateServiceWorker(registration) {
+    
     const installingWorker = registration.installing;
     if (installingWorker == null) return;
     installingWorker.onstatechange = () => {

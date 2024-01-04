@@ -1,22 +1,26 @@
 <div class='bg'>
 
+<div style='padding:20px; border-radius:20px; background-color:#283e55; width: 50%; margin: auto;margin-top:50px'>
+<p>Click the relic for sound layer and image swap and note background layered animation</p>
 
-<div class='center'>
+  <ion-button  size='large' expand='block' (click)="movetohome()">change route</ion-button>
+</div>
+
+<div class='relic' style='z-index:100'>
 
  
 
- <img [src]="imgSrc" width='212' height='222' style="margin:50px"
-           (click)="toggleSrc(imgSrc)">
+ <img [src]="imgSrc" (click)="toggleSrc(imgSrc)" class='relic-image'>
 
 
 <br><br>
-<p>This click/press and sound effect</p>
-
-  <ion-button  size='large' expand='block' (click)="movetohome()">change route</ion-button>
 
 </div>
 
 
  
 </div>
+<img class='screen-left' src='./assets/sandbox/anim_screenLeft.gif'/>
+<img class='screen-right' src='./assets/sandbox/anim_computer-right.gif'/>
 <img class='river-relection' src='./assets/sandbox/river_relection.png'/>
+<img [src]="imgSrc" (click)="toggleSrc(imgSrc)" class='relic-image'>

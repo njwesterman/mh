@@ -12,6 +12,32 @@
   background-size: 100% 100%;
 }
 
+.relic {
+  
+  position: absolute;
+  top: 79%;
+  left: 63%;
+ // background-color:#1F354C;
+ background:transparent;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  
+}
+
+.relic-image{
+  margin:auto;
+  width:8%;
+  position:absolute; /* Required */
+  height:15.5%;
+  bottom:12.3%; /* Aligns at the bottom */
+ left:24.5%;right:0; /* Aligns horizontal center */
+  max-height:100%; /* images bigger than 175 px  */
+  max-width:100%;  /* will be shrinked to size */
+  z-index:1;
+
+}
+
+
 
 .river-relection-FIXED-WIDTH{
   margin:auto; /* Required */
@@ -35,5 +61,29 @@
  height:13%;
  max-height:100%; /* images bigger than 175 px  */
  max-width:100%;  /* will be shrinked to size */
+z-index:10;
+}
 
+.screen-left{
+  margin:auto;
+  width:3%;
+  position:absolute; /* Required */
+  height:4.5%;
+  bottom:22.2%; /* Aligns at the bottom */
+ left:-25.5%;right:0; /* Aligns horizontal center */
+  max-height:100%; /* images bigger than 175 px  */
+  max-width:100%;  /* will be shrinked to size */
+  z-index:1;
+}
+
+.screen-right{
+  margin:auto;
+  width:5%;
+  position:absolute; /* Required */
+  height:4.5%;
+  bottom:22.3%; /* Aligns at the bottom */
+ left:43.5%;right:0; /* Aligns horizontal center */
+  max-height:100%; /* images bigger than 175 px  */
+  max-width:100%;  /* will be shrinked to size */
+  z-index:1;
 }
