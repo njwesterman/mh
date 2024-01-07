@@ -1,18 +1,70 @@
 
 <!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="./assets/sandbox/anim_birds.mp4" type="video/mp4">
-</video>
-
-
-
-
+<video
+    title="Advertisement"
+    style="background-color: rgb(0, 0, 0); position: absolute; width: 100%; height: 100%;"
+    src="./assets/sandbox/anim_birds.mp4"
+    autoplay="true"
+    id="myVideo"
+    muted="muted"></video>
 
 <!-- Optional: some overlay text to describe the video -->
 <div class="content">
-<div class='center'>
- <h1>Video</h1>
- <p>This is an example of a video background</p>
-  <ion-button  size='large' expand='block' (click)="movetohome()">change route</ion-button>
+
+
+
+<div class='mainBg' *ngIf='!versionReady'>
+
+
+
+
+
+<div class="center" style='background-color:black'>
+  
+  <h1>{{versionCheck}}</h1>
+<span class="loader"></span>  
+  
+  
+  <p>Please be patient as the website is currently undergoing initial setup and downloading necessary files. This may take a couple of minutes on the first run, but subsequent visits will be quicker.</p>
+  
+
+
+
+</div>
+
+<p style='bottom:0px; right:10px;position:absolute'>Version 1.0.5</p>
+
+</div>
+
+
+
+
+
+
+
+
+<div class='mainBg' *ngIf='versionReady'>
+
+
+
+<div class="mainLoadingButton center" style='background-color:black'>
+  
+  <div *ngIf="isServiceWorkerRunning">
+  <h1>Ready to Start!</h1>
+  <p >Great news! The application is ready for you to explore. Enjoy your experience!</p>
+
   </div>
+<ion-button class='startBtn' size='large' expand='block' (click)="movetohome()">Let's Go!</ion-button>
+
+   
+
+</div>
+
+
+<p style='bottom:0px; right:10px;position:absolute'>Version 1.0.5</p>
+
+
+
+
+</div>
 </div>

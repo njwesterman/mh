@@ -7,7 +7,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'preloading',
     pathMatch: 'full',
   },
   {

@@ -10,7 +10,27 @@
 
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  
+
+
 }
+
+.thunder {
+  /* The image used */
+
+  background-image: url("../../assets/sandbox/thunder.webp");
+display:none;
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center center;
+
+  background-repeat: no-repeat;
+ z-index:-1;
+  background-size: 100% 100%;
+}
+
 
 .relic {
   
@@ -21,7 +41,7 @@
  background:transparent;
   transform: translate(-50%, -50%);
   padding: 10px;
-  
+ 
 }
 
 .relic-image{
@@ -38,6 +58,102 @@
 }
 
 
+.relic-gem{
+  margin:auto;
+  width:5%;
+  position:absolute; /* Required */
+  height:9%;
+  display:block;
+  bottom:16%; /* Aligns at the bottom */
+ left:24.5%;right:0; /* Aligns horizontal center */
+  max-height:100%; /* images bigger than 175 px  */
+  max-width:100%;  /* will be shrinked to size */
+  
+  z-index:2;
+
+}
+
+.speak-4{
+  display:block;
+  width: 20%;
+  position:absolute;
+  left:64%;
+  z-index:50;
+bottom:21%;
+}
+
+.speak-3{
+  display:block;
+  width: 20%;
+  position:absolute;
+  left:54%;
+  z-index:50;
+bottom:21%;
+}
+
+.speak-2{
+  display:block;
+  width: 20%;
+  position:absolute;
+  left:54%;
+  z-index:50;
+bottom:21%;
+}
+
+.forceHide{
+  display: none !important;
+}
+.sepiaOn {
+  background-image: url("../../assets/sandbox/2ii5.gif");
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center center;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+
+.speak-1{
+  display:block;
+  width: 20%;
+  position:absolute;
+  left:34%;
+  z-index:50;
+bottom:21%;
+}
+
+.evil-eyes{
+  height:13%;
+  width:7%;
+  bottom:14%;
+  display:none;
+  left:75%;
+  z-index:20;
+  position:absolute; /* Required */
+}
+
+
+.fart-bubble{
+  display:none;
+  width: 20%;
+  position:absolute;
+  left:36%;
+  z-index:50;
+bottom:5%;
+transform: rotate(180deg);
+}
+
+.weasel{
+  height:10%;
+  width:5%;
+  bottom:13%;
+  left:25%;
+  z-index:20;
+  position:absolute; /* Required */
+}
 
 .river-relection-FIXED-WIDTH{
   margin:auto; /* Required */
@@ -86,4 +202,14 @@ z-index:10;
   max-height:100%; /* images bigger than 175 px  */
   max-width:100%;  /* will be shrinked to size */
   z-index:1;
+}
+
+
+
+.mainLoadingButton{
+  display:none;
+}
+
+.startBtn{
+  display:none;
 }

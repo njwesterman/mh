@@ -1,16 +1,26 @@
-<div class='bg'>
 
-<div style='padding:20px; border-radius:20px; background-color:#283e55; width: 50%; margin: auto;margin-top:50px'>
-<p>Click the relic for sound layer and image swap and note background layered animation</p>
+<div class='thunder'>
+<img class='speak-3' [src]='speech3' />
+<img class='speak-4' [src]='speech4' />
+<img class='evil-eyes' src='./assets/sandbox/redeyes.png' />
+<img [ngClass]="{'fart-bubble': true, 'forceHide': forceHide}" src='./assets/sandbox/fartbubble.gif' />
 
-  <ion-button  size='large' expand='block' (click)="movetohome()">change route</ion-button>
+</div>
+
+<div [ngClass]="{'bg': true}" #parentContainer>
+<div [ngClass]="{'sepiaOn': isSepia}" >
+
+<div *ngIf='endScene' style='padding:20px; border-radius:20px; background-color:#283e55; width: 50%; margin: auto;margin-top:50px'>
+<p>Let's go and find the other's and let them know what happened!</p>
+
+  <ion-button  size='large' expand='block' (click)="movetohome()">Let's go!</ion-button>
 </div>
 
 <div class='relic' style='z-index:100'>
 
  
 
- <img [src]="imgSrc" (click)="toggleSrc(imgSrc)" class='relic-image'>
+ <img [src]="imgSrc"  class='relic-image'>
 
 
 <br><br>
@@ -18,9 +28,20 @@
 </div>
 
 
- 
+  <div id='testDiv' class="nav light"   (click)="toggleSrc()" >
+<img [src]="imgSrc" class='relic-image'>
+<img src="./assets/sandbox/gem-respect.png"class='relic-gem'>
 </div>
+ 
+
 <img class='screen-left' src='./assets/sandbox/anim_screenLeft.gif'/>
 <img class='screen-right' src='./assets/sandbox/anim_computer-right.gif'/>
 <img class='river-relection' src='./assets/sandbox/river_relection.png'/>
-<img [src]="imgSrc" (click)="toggleSrc(imgSrc)" class='relic-image'>
+<img class='weasel weasel2' src='./assets/sandbox/weasel.gif' />
+
+<img class='speak-2' [src]='speech2' />
+
+<img class='speak-1' [src]='speech1' />
+</div>
+
+
