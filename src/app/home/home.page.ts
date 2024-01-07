@@ -100,9 +100,8 @@ export class HomePage implements AfterViewInit, OnDestroy {
     });
     this.tween8.play();
     this.tween8.invalidate();
-    if (this.howl2) {
-      this.howl2.stop();
-    }
+  
+
 
     this.howlsad = new Howl({
       src: './assets/sandbox/sad.mp3',
@@ -111,6 +110,14 @@ export class HomePage implements AfterViewInit, OnDestroy {
       preload: true,
     
     });
+
+    if (this.howl2) {
+      this.howl2.stop();
+    }
+
+    if (this.howl3) {
+      this.howl3.stop();
+    }
 
     this.howlsad.play();
 
@@ -167,16 +174,17 @@ export class HomePage implements AfterViewInit, OnDestroy {
     this.howl3 = new Howl({
       src: './assets/sandbox/sound2.mp3',
       html5: true,
-      loop: false,
+      loop: true,
       preload: true,
       onend: () => {
         //  this.playbackEnded = true;
       }
     });
-    this.howl2.play();
+    
     if (this.howl) {
       this.howl.stop();
     }
+    this.howl2.play();
     this.howl3.play();
     this.tween4.play();
     this.tween5.play();

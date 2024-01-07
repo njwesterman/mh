@@ -4,7 +4,6 @@ import { IonApp, IonRouterOutlet, NavController, IonButton, isPlatform } from '@
 import { Platform } from '@ionic/angular';
 import { CommonModule } from '@angular/common';  
 
-import { Subscription, interval } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 
