@@ -13,5 +13,9 @@ export const routes: Routes = [
   {
     path: 'preloading',
     loadComponent: () => import('./preloading/preloading.page').then( m => m.PreloadingPage)
+  },  {
+    path: 'mod1',
+    loadComponent: () => import('./mod1/mod1.page').then( m => m.Mod1Page)
   },
+
 ];

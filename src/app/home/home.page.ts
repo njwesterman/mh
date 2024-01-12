@@ -5,7 +5,7 @@ import { IonicModule, NavController } from '@ionic/angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Howl, Howler } from 'howler';
-import { gsap, Back, Bounce, Elastic } from 'gsap'
+import gsap from "gsap";
 import { Observable, Subscription, fromEvent } from 'rxjs';
 @Component({
   selector: 'app-home',

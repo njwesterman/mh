@@ -1,0 +1,81 @@
+.c-narrate{
+    width: 92%;
+    left: 4%;
+    margin: auto;
+    height: 20%;
+    bottom: 4%;
+    display: flex;
+    border-radius: 20px;
+    position: fixed;
+    opacity: 0.8;
+    background: #0C213F;
+    flex-wrap: wrap;
+    align-content: center;
+
+
+&__down-arrow{
+    bottom: 6%;
+    left:93%;
+    position: fixed;
+}
+
+&__container{
+    display:flex;
+    color: white;
+
+width:95%;
+
+font-family: Poppins;
+font-weight: 500;
+line-height: 45.60px;
+position: relative;
+left:2%;
+font-size:2.2em;
+word-wrap: break-word;
+
+.cursor::after {
+    content:'';
+    display:inline-block;
+    margin-left:3px;
+    background-color:white;
+    animation-name:blink;
+    animation-duration:0.5s;
+    animation-iteration-count: infinite;
+  }
+  span.cursor::after {
+    height:24px;
+    width:13px;
+  }
+  p.cursor::after {
+    height:13px;
+    width:6px;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity:1;
+    }
+    49% {
+      opacity:1;
+    }
+    50% {
+      opacity:0;
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+
+}
+
+}
+
+
+
+
+
+  
+
+  
+  
