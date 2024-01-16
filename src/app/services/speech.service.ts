@@ -1,121 +1,95 @@
 import { Injectable } from '@angular/core';
 import * as $ from "jquery"
+import { BehaviorSubject } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class SpeechService {
+export class speechService {
+  private _showSpeech = new BehaviorSubject<boolean>(false);
+  showSpeech$ = this._showSpeech.asObservable();
 
   constructor() { }
-
-  speedForward: number = 20 //Typing Speed
-  speedWait:number = 1000 // Wait between typing and backspacing
-  speedBetweenLines:number = 1000 //Wait between first and second lines
-  speedBackspace: number = 25 //Backspace Speed
+  speedForward: number = 100 //Typing Speed
+  speedWait: number = 1000 // Wait between typing and backspacing
+  speedBetweenLines: number = 100 //Wait between first and second lines
+  speedBetweenParagraphs: number = 1000 //Backspace Speed
   
+  showSpeech: boolean = false;
 
-startTyping(){
+  async startTyping() {
+    var textArray = [
+      "Once upon a time in the futuristic city of NeoTech, where advanced technology and artificial intelligence ruled, there was a peculiar creation known as the Robo Raven. ",
+      "And sometimes when he sneezed, he farted."
+    ];
 
-
-  var textArray = [
-    "In the heart of the Australian outback, under a vast blue sky, the digital realm thrives thanks to the eSafety relics. These four powerful symbols have long kept the internet safe, allowing Australians to connect and share."
-  ];
-
-
-  
-  typeWriter('textOutput', textArray, this.speedForward, this.speedWait, this.speedBetweenLines, this.speedBackspace)
-
-
-}
-
-
-
-  //alert('you did')
-  //let textArray: string[] = [
-    //"In the heart of the Australian outback, under a vast blue sky, the digital realm thrives thanks to the eSafety relics. These four powerful symbols have long kept the internet safe, allowing Australians to connect and share."
-  //];
-  //this.typeWriter("textOutput", textArray);
-
-
-}
-
-
-var i = 0,
-a = 0,
-isBackspacing = false,
-isParagraph = false;
-
-function typeWriter(id: any, ar: any, speedForward: any, speedWait: any, speedBetweenLines: any, speedBackspace: any) {
-  
-
-
-  var element = $("#" + id),
-      aString = ar[a],
-      eHeader = element.children("span"), //Header element
-      eParagraph = element.children("p"); //Subheader element
-  
-  // Determine if animation should be typing or backspacing
-  if (!isBackspacing) {
-    
-    // If full string hasn't yet been typed out, continue typing
-    if (i < aString.length) {
-      
-      // If character about to be typed is a pipe, switch to second line and continue.
-      if (aString.charAt(i) == "|") {
-        isParagraph = true;
-        eHeader.removeClass("cursor");
-        eParagraph.addClass("cursor");
-        i++;
-        setTimeout(function(){ typeWriter(id, ar,  speedForward, speedWait, speedBetweenLines, speedBackspace); }, speedBetweenLines);
-        
-      // If character isn't a pipe, continue typing.
-      } else {
-        // Type header or subheader depending on whether pipe has been detected
-        if (!isParagraph) {
-          eHeader.text(eHeader.text() + aString.charAt(i));
-        } else {
-          eParagraph.text(eParagraph.text() + aString.charAt(i));
-        }
-        i++;
-        setTimeout(function(){ typeWriter(id, ar,  speedForward, speedWait, speedBetweenLines, speedBackspace); }, speedForward);
-      }
-      
-    // If full string has been typed, switch to backspace mode.
-    } else if (i == aString.length) {
-      
-    //  isBackspacing = true;
-      //setTimeout(function(){ typeWriter(id, ar,  speedForward, speedWait, speedBetweenLines, speedBackspace); }, speedWait);
-      
-    }
-    
-  // If backspacing is enabled
-  } else {
-    
-    // If either the header or the paragraph still has text, continue backspacing
-    if (eHeader.text().length > 0 || eParagraph.text().length > 0) {
-      
-      // If paragraph still has text, continue erasing, otherwise switch to the header.
-      if (eParagraph.text().length > 0) {
-        eParagraph.text(eParagraph.text().substring(0, eParagraph.text().length - 1));
-      } else if (eHeader.text().length > 0) {
-        eParagraph.removeClass("cursor");
-        eHeader.addClass("cursor");
-        eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
-      }
-      setTimeout(function(){ typeWriter(id, ar,  speedForward, speedWait, speedBetweenLines, speedBackspace); }, speedBackspace);
-    
-    // If neither head or paragraph still has text, switch to next quote in array and start typing.
-    } else { 
-      
-      isBackspacing = false;
-      i = 0;
-      isParagraph = false;
-      a = (a + 1) % ar.length; //Moves to next position in array, always looping back to 0
-      setTimeout(function(){ typeWriter(id, ar,  speedForward, speedWait, speedBetweenLines, speedBackspace); }, 50);
-      
-    }
+    this.showSpeechBox();
+    await typeWriter('textOutput', textArray[0], this.speedForward, this.speedWait, this.speedBetweenLines,  0, false, 5000);
+    await typeWriter('textOutput', textArray[1], this.speedForward, this.speedWait, this.speedBetweenLines,  0, false, 5000);
+    this.hideSpeechBox();
   }
+  
+
+  
+  showSpeechBox(){
+    
+    this._showSpeech.next(true);
+    }
+    
+      hideSpeechBox(){
+        this._showSpeech.next(false);
+      }
+
+  
+}
+
+  
+
+  
+
+async function typeWriter(id: any, ar: any, speedForward: any, speedWait: any, speedBetweenLines: any,  i: number, clearTypeWriter: boolean, waitBeforeNext: number) {
+
+  return new Promise<void>(async (resolve, reject) => {
+  var element = $("#" + id),
+    aString = ar,
+    eHeader = element.children("span")
+    
+eHeader.text(eHeader.text() + aString.charAt(i));
+
+if (i < aString.length ) {
+  setTimeout(() => {
+    typeWriter(id, ar, speedForward, speedWait, speedBetweenLines, i + 1,  clearTypeWriter, waitBeforeNext)
+      .then(() => resolve())
+      .catch((error) => reject(error));
+  }, speedBetweenLines);
+} else if (i >= aString.length ) {
+  
+  await sleep(waitBeforeNext)
+
+for (let y = 0; y < aString.length; y++) {
+  eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
+  await sleep(10);
 }
 
 
+resolve();
+
+
+
+
+  
+}
+});
+
+
+
+
+ 
+
+}
+
+
+async function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}

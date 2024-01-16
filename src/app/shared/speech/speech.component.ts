@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
+import { Subscription } from 'rxjs/internal/Subscription';
+import { speechService } from 'src/app/services/speech.service';
 
 @Component({
   selector: 'app-speech',
@@ -9,27 +11,28 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule]
 
 })
-export class SpeechComponent {
+export class SpeechComponent implements OnInit, OnDestroy {
+  showNarrate: boolean;
+  private sub: Subscription;
 
+  constructor(private speechService: speechService) { }
 
-
-  @Input() name?: string;
-
-  ionViewDidEnter() {
-    
+  ngOnInit() {
+    this.sub = this.speechService.showSpeech$.subscribe(show => {
+      this.showNarrate = show;
+    });
   }
 
-
-  
-
+  ngOnDestroy() {
+    // Don't forget to unsubscribe to prevent memory leaks
+    this.sub.unsubscribe();
   }
-
+}
   
 
    
 
 
-// Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
 
 
 

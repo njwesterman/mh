@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import anime from 'animejs/lib/anime.es';
-import { SpeechService } from '../services/speech.service';
+import { speechService } from '../services/speech.service';
 import { SpeechComponent } from '../shared/speech/speech.component';
 
 
@@ -16,14 +16,14 @@ import { SpeechComponent } from '../shared/speech/speech.component';
 })
 export class Mod1Page {
 
-  constructor(public speech: SpeechService ) { }
+  constructor(public speechService: speechService ) { }
 
   ngOnInit() {
   }
 
   async ionViewDidEnter(){
 
-  await this.speech.startTyping();
+  await this.speechService.startTyping();
   //await this.speech.startTyping2();
 
 }
