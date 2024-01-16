@@ -1,10 +1,29 @@
 
-<div class='c-narrate' [class.hide]="!showNarrate">
+<div class='c-narrate' [class.hide]="!showNarrate" [class.top]='positionTop'>
 
-<div class='c-narrate__container' id='textOutput'>
+<div class='c-narrate__container' id='narrateOutput'>
  <span class="cursor"></span>
-    <p></p>
-<img class='c-narrate__down-arrow' src='./assets/sandbox/Speech_Down_Arrow.svg' />
+    
+<img class='c-narrate__down-arrow' src='./assets/speech/speech_down_arrow.svg' />
 </div>
 </div>
+  
+
+
+<div class='c-speech' [class.hide]="!showDialog" [class.top]='positionTop'>
+<div class='c-speech__container' >
+<div class='c-speech__nametag' style="background-image:url('../../../assets/speech/name_tag.svg')"><span class='c-speech__nametag-name'>River</span></div>
+
+<div class='c-speech__avatar'>
+<div class='c-speech__avatar-image' style="background-image: url('../../../assets/speech/avatar_river.png')"></div>
+</div>
+<div class='c-speech__dialog' id='dialogOutput'>
+ <span class="cursor"></span>
+    
+<img class='c-speech__down-arrow' src='./assets/speech/speech_down_arrow.svg' />
+</div>
+
+</div>
+</div>
+
   

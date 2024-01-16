@@ -23,8 +23,8 @@ export class Mod1Page {
 
   async ionViewDidEnter(){
 
-  await this.speechService.startTyping();
-  //await this.speech.startTyping2();
+  //await this.speechService.startTyping();
+ await this.speechService.startDialog();
 
 }
 

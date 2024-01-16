@@ -1,31 +1,40 @@
+.top{
+  bottom:76% !important;
+}
+
+
+
 .c-narrate {
   width: 92%;
   left: 4%;
   margin: auto;
   height: 20%;
   bottom: 4%;
+  z-index:100000;
   display: flex;
   border-radius: 20px;
   position: fixed;
-  opacity: 0.8;
-  background: #0C213F;
+  opacity: 1;
+  background-color: #0C213F;
   flex-wrap: wrap;
   align-content: center;
+  background-image: url("../../../assets/speech/main_outline.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
 
   &__down-arrow {
-    bottom: 6%;
-    left: 92%;
+    bottom: 12%;
+    left: 96%;
     width: 2%;
-    position: fixed;
+    position: absolute;
   }
 
   &__container {
     display: flex;
     color: white;
     width: 95%;
-    
-    
-    
 
     .cursor::after {
       content: '';
@@ -37,27 +46,19 @@
       animation-iteration-count: infinite;
     }
 
-span{
-  font-family: Poppins;
-    font-weight: 500;
-    left: 2%;
-    line-height: 45.60px;
-    position: relative;
-    font-size: 2.2em;
-    word-wrap: break-word;
-}
-
-    span.cursor::after {
-    
-      height: 26px;
-      width: 15px;
+    span {
+      font-family: Poppins;
+      font-weight: 500;
+      left: 2%;
+      line-height: 45.60px;
+      position: relative;
+      font-size: 2.2em;
+      word-wrap: break-word;
     }
 
-    p.cursor::after {
-      font-family: Poppins;
-      height: 13px;
-      width: 6px;
-      font-size:12px;
+    span.cursor::after {
+      height: 26px;
+      width: 15px;
     }
 
     @keyframes blink {
@@ -82,4 +83,111 @@ span{
 
 .hide {
   display: none !important;
+}
+
+.c-speech {
+  width: 92%;
+  z-index:100000;
+  left: 4%;
+  height: 20%;
+  background: rgb(11, 33, 63, 0.7);
+
+  &__down-arrow {
+    bottom: 12%;
+    left: 96%;
+    width: 2%;
+    position: absolute;
+  }
+
+  &__container {
+    background-image: url("../../../assets/speech/main_outline.png");
+    display: flex;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-content: center;
+  }
+
+  span {
+    font-family: Poppins;
+    font-weight: 500;
+    left: 2%;
+    width:98%;
+    line-height: 45.60px;
+    position: relative;
+    font-size: 2.2em;
+    word-wrap: break-word;
+  }
+
+  span.cursor::after {
+    height: 26px;
+    width: 15px;
+  }
+
+  margin: auto;
+  bottom: 4%;
+  display: flex;
+  border-radius: 20px;
+  position: fixed;
+
+  &__nametag {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    left: 1.4%;
+    width: 9%;
+    text-align: center;
+    height: 23%;
+    z-index: 20;
+    bottom: 90%;
+
+    &-name {
+      color: white;
+      font-size: 32px;
+      font-family: 'Poppins';
+      line-height: 55.6px !important;
+      font-weight: 800;
+      word-wrap: break-word
+    }
+  }
+
+  &__dialog {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
+    color: white;
+    background-image: url('../../../assets/speech/speech_outline.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #0C213F;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__avatar {
+    display: flex;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(44, 64, 92, 0.8);
+    width: 10%;
+
+    &-image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 96%;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
 }

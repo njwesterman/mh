@@ -13,19 +13,33 @@ import { speechService } from 'src/app/services/speech.service';
 })
 export class SpeechComponent implements OnInit, OnDestroy {
   showNarrate: boolean;
-  private sub: Subscription;
+  showDialog: boolean;
+  positionTop: boolean;
+
+  private narrateSub: Subscription;
+  private dialogSub: Subscription;
+  private positionSub: Subscription;
 
   constructor(private speechService: speechService) { }
 
   ngOnInit() {
-    this.sub = this.speechService.showSpeech$.subscribe(show => {
+    this.narrateSub = this.speechService.showNarration$.subscribe(show => {
       this.showNarrate = show;
     });
+    this.dialogSub = this.speechService.showDialog$.subscribe(show => {
+      this.showDialog = show;
+    });
+    this.positionSub = this.speechService.positionTop$.subscribe(show => {
+      this.positionTop = show;
+    });
+
   }
 
   ngOnDestroy() {
-    // Don't forget to unsubscribe to prevent memory leaks
-    this.sub.unsubscribe();
+    
+    this.narrateSub.unsubscribe();
+    this.dialogSub.unsubscribe();
+this.positionSub.unsubscribe();
   }
 }
   

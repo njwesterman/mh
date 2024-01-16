@@ -7,16 +7,19 @@ import { NgModule } from '@angular/core';
 import { Howl, Howler } from 'howler';
 import gsap from "gsap";
 import { Observable, Subscription, fromEvent } from 'rxjs';
+import { speechService } from '../services/speech.service';
+import { SpeechComponent } from '../shared/speech/speech.component';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule, SpeechComponent]
 })
 export class HomePage implements AfterViewInit, OnDestroy {
   @ViewChild('parentContainer') parentContainer: ElementRef;
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, public speechService: speechService) { }
   imgSrc = './assets/sandbox/relic-respect-off.png'
   speech2 = './assets/sandbox/speech/blank.png';
   speech1 = './assets/sandbox/speech/blank.png';
@@ -299,6 +302,11 @@ export class HomePage implements AfterViewInit, OnDestroy {
     this.speech4 = './assets/sandbox/speech/blank.png';
     this.imgSrcMouse = './assets/sandbox/relic-respect-off.png'
     this.width = this.parentContainer.nativeElement.offsetWidth;
+   
+    await this.speechService.startTyping();
+
+
+   
     this.tween1 = gsap.to(".weasel", {
       duration: 2,
       x: () => this.width * 0.1,
@@ -309,9 +317,15 @@ export class HomePage implements AfterViewInit, OnDestroy {
       scrub: 1,
       invalidateOnRefresh: true,
       onComplete: async () => {
-        this.speech1 = './assets/sandbox/speech/look_at_this_relic.gif';
+
+       this.speech1 = './assets/sandbox/speech/look_at_this_relic.gif';
         await sleep(5000); // Sleep for 2 seconds
         this.speech1 = './assets/sandbox/speech/blank.png';
+
+        await this.speechService.startDialog();
+
+       
+
         await this.scene2();
       },
     });

@@ -13,7 +13,7 @@
         "name": "assets",
         "installMode": "prefetch",
         "resources": {
-          "files": ["assets/fonts","/assets/sandbox/*.(eot|svg|cur|mp4|mp3|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"]
+          "files": ["assets/fonts","assets/speech", "/assets/sandbox/*.(eot|svg|cur|mp4|mp3|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"]
         }
       }
     ]
