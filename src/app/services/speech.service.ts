@@ -36,7 +36,7 @@ export class speechService {
       "The relic is beautiful, it's shiny green gem protects us from stuff somehow. "
     ];
     this.showDialogBox('bottom');
-    await typeWriter('dialogOutput', textArray[0], this.speedForward, this.speedWait, this.speedBetweenLines, 0, false, 5000);
+    await typeWriter('dialogOutput', textArray[0], this.speedForward, this.speedWait, this.speedBetweenLines, 0, false, 8000);
     this.hideDialogBox();
     
   }
