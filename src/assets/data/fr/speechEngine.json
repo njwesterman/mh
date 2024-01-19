@@ -1,0 +1,95 @@
+{
+  "speechEngine": {
+    "config": {
+      "for": {
+        "continue": "Appuyez pour continuer"
+      }
+    },
+    "players": {
+      "fr": {
+        "narrator": {
+          "narD_01": "Au cœur de l'outback australien, sous un vaste ciel bleu, le royaume numérique prospère grâce aux reliques d'eSafety. Ces quatre symboles puissants assurent depuis longtemps la sécurité d'Internet, permettant aux Australiens de se connecter et de partager.",
+          "narD_02": "Nous devrons réfléchir ensemble et faire un petit travail de détective pour trouver le joyau de l'enquête. Nous ferions mieux de faire attention aux astuces de Robo Raven. Lorsque nous enquêtons, nous recherchons quelles parties des informations en ligne pourraient ne pas être vrai. Nous déterminons également à quoi ressemble le contenu dangereux.",
+          "narD_03": "Maintenant que la relique d'enquête est restaurée, nous pouvons repérer la vérité et déterminer facilement ce qui est sûr ou dangereux. N'oubliez jamais de rechercher des indices et de vous demander si les choses que vous voyez en ligne sont vraies.",
+          "narD_04": "Robo Raven a entaillé la gemme du respect, nous devrons la récupérer, jetons un coup d'œil à ce que signifie être respectueux. Laisser des commentaires méchants ou faire en sorte que les gens se sentent exclus peut être blessant, le respect est sur le fait de faire preuve de gentillesse et d'être attentif aux sentiments des autres.",
+          "narD_05": "Voyez-vous Robo Raven ? Être méchant en ligne ne servira à rien. En étant gentils, solidaires et respectueux, nous avons restauré la Relique du Respect ! Lorsque nous traitons les autres comme nous souhaitons être traités, nous agissons d'une manière qui montre du respect.",
+          "narD_06": "Sans sa gemme, la relique des indices corporels ne fonctionne pas. Voyons si nous pouvons comprendre ce que ressent Dusty. Notre corps est doué pour nous dire quand quelque chose ne va pas. Nous devons juste savoir écouter .",
+          "narD_07": "Écouter nos indices corporels avec la Relique restaurée est beaucoup plus facile. Lorsque nous écoutons les signes, nous pouvons immédiatement savoir quand nous nous sentons mal à l'aise et demander de l'aide.",
+          "narD_08": "Nous devrons retrouver Robo Raven pour trouver la gemme de responsabilité. Il n'a pas été très en sécurité avec ses informations personnelles ! Si nous suivons les indices qu'il a laissés derrière nous, nous pouvons restaurer la relique de responsabilité.",
+          "narD_09": "Publier vos informations personnelles en ligne n'est pas très responsable. Voyez avec quelle rapidité nous avons pu trouver Robo Raven ? N'oubliez jamais d'être prudent avec ce que vous partagez en ligne et de protéger vos informations personnelles.",
+          "narD_10": "Nous pouvons aider Robo Raven à voir ses erreurs. On ne lui a jamais appris à être en sécurité en ligne, mais c'est ce que les Mighty Heroes font de mieux. Utilisons tout ce que nous avons appris lors de la restauration des reliques et re- connectez-les tous les quatre au mainframe. Ensemble, nous pouvons rendre Internet à nouveau sûr.",
+          "narD_11": "Le mainframe est restauré et Internet est à nouveau sécurisé !! Garder le mainframe en ligne signifie garder les quatre reliques connectées. Même Robo Raven sait désormais enquêter, faire preuve de respect, écouter les indices corporels et exercer ses responsabilités. "
+        },
+        "robo": {
+          "robD_01": "Mwahahaha ! Tu te crois tellement intelligent, et bien dommage, ce joyau est miiinnneeeee !",
+          "robD_02": "S'il te plait River, tu ne peux pas m'arrêter aussi facilement.",
+          "robD_03": "Que veux-tu dire ? Je sais utiliser Internet, je l'ai inventé !",
+          "robD_04": "Ha ! Je vais te montrer.",
+          "robD_05": "Res…resp…responsabilité ? C'est donc ce qui assure la sécurité de mes informations !",
+          "robD_06": "Je suis toujours laissé de côté :( pourquoi es-tu si gentil après tout ce que j'ai fait ?",
+          "robD_07": "Eh bien, ça m'a un peu secoué ! Qui aurait cru que les indices corporels étaient si importants ?",
+          "robD_08": "Pendant tout ce temps, j'ai laissé mes peurs me contrôler. Le véritable pouvoir n'a jamais été de voler les reliques, mais d'utiliser les compétences qu'elles détiennent !",
+          "robD_09": "Wow, je me sens... je me sens... je me sens à nouveau moi-même !",
+          "robD_10": "Merci beaucoup, Might Heroes, je vous en dois un. Maintenant, surfons sur le net comme les légendes que nous sommes !"
+        },
+        "billie": {
+          "bilD_01": "Ne t'inquiète pas, Dusty. Nous déjouerons facilement ce Corbeau et la gemme Investigate Relic sera remise à sa juste place.",
+          "bilD_02": "Mais cela valait la peine, car enquêter est l'une des choses les plus importantes à faire en ligne.",
+          "bilD_03": "Surprise, surprise, Robo Raven recommence.",
+          "bilD_04": "La gemme est à nous… et la relique restaurée… C'est parti !",
+          "bilD_05": "Je parie que Robo Raven en est... responsable.",
+          "bilD_06": "Parce que c'est ce que font les puissants héros !",
+          "bilD_07": "Hé, j'aime appeler ça une course de bilby."
+        },
+        "river": {
+          "rivD_01": "Vous pariez !",
+          "rivD_02": "D'accord, l'équipe : Pour récupérer la gemme et activer la relique Respect, nous devons apprendre à être gentils en ligne.",
+          "rivD_03": "C'était bien !",
+          "rivD_04": "Attendez, par ici l'équipe !",
+          "rivD_05": "J'ai... j'ai... un mauvais pressentiment à ce sujet.",
+          "rivD_06": "Eh bien, mes yeux aussi ont un mauvais pressentiment, car je ne vois pas de pierre précieuse !",
+          "rivD_07": "Regardez, une note Je parie que vous ne pouvez pas deviner où je l'ai cachée ! - Robo Corbeau",
+          "rivD_08": "Woo-hoo ! Continuons cette aventure, suivez-moi !",
+          "rivD_09": "Wooaahhhhh, c'est quoi cet endroit ?",
+          "rivD_10": "Agghh !! Robo Raven, je pensais qu'on t'avait battu.",
+          "rivD_11": "C'est comme je le dis toujours : en cas de doute, faites confiance à votre instinct !",
+          "rivD_12": "Nous savions que tu avais ça en toi, Robo Raven.",
+          "rivD_13": "Kawabunga !"
+        },
+        "dusty": {
+          "dusD_01": "Pourquoi tu...!",
+          "dusD_02": "Oooooooo, la relique du Respect !",
+          "dusD_03": "C'est encore mieux maintenant, nous avons une autre relique activée !",
+          "dusD_04": "C'est exactement le but de cette relique Body Clue ! Écoutez votre corps et faites confiance à votre instinct.",
+          "dusD_05": "Résolvons ces énigmes et récupérons-le de Robo Raven !",
+          "dusD_06": "Dun, dun, dun, un autre mord la poussière..y!",
+          "dusD_07": "Ouf, Dieu merci, je fais caca !",
+          "dusD_08": "Nous l'avons fait ! Nous avons battu les tours de Robo Raven !",
+          "dusD_09": "On dirait que Robo Raven s'est amusé en ligne et a déconnecté les reliques du mainframe.",
+          "dusD_10": "Exactement ! Protéger votre vie privée protège votre sécurité !",
+          "dusD_11": "Très bien, mettons tout cela ensemble. Une dernière étape et nous débloquerons le mainframe !",
+          "dusD_12": "Tout ce qu'il vous a fallu, c'est une course effrénée autour de l'Australie !"
+        },
+        "wanda": {
+          "wanD_01": "Ouf, c'était dur !",
+          "wanD_02": "Faisons-le !",
+          "wanD_03": "Où aller ensuite ?",
+          "wanD_04": "Taaake ce Robo Raven !",
+          "wanD_05": "Nous sommes là !",
+          "wanD_06": "Attendez, la gemme de la relique de responsabilité a disparu !",
+          "wanD_07": "Il n'est certainement pas responsable.",
+          "wanD_08": "Résolussons les énigmes et trouvons cette gemme !",
+          "wanD_09": "Et j'ai appris l'importance de la responsabilité en cours de route.",
+          "wanD_10": "C'est ici que toutes les énergies de la relique se réunissent pour nous protéger en ligne.",
+          "wanD_11": "Non, tu ne l'as pas fait ! Tu n'as même jamais appris à être en sécurité en ligne.",
+          "wanD_12": "Maintenant, vous comprenez !",
+          "wanD_13": "Tout ce qui compte, c'est que nous avons appris à Robo Raven comment utiliser Internet en toute sécurité et maintenant il est l'un des nôtres."
+        },
+        "all": {
+          "allD_01": "Coooooooollllllllllll",
+          "addD_02": "L'un de nous, l'un de nous !"
+        }
+      }
+    }
+  }
+}

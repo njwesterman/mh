@@ -1,0 +1,79 @@
+voiceEngine
+   players
+    en
+      narrator
+        narV_01 =
+        narV_02 =
+        narV_03 =
+        narV_04 =
+        narV_05 =
+        narV_06 = 
+        narV_07 = 
+        narV_08 = 
+        narV_09 =
+        narV_10 =
+        narV_11 =
+      robo
+        robV_01 = 
+        robV_02 = 
+        robV_03 = 
+        robV_04 = 
+        robV_05 = 
+        robV_06 = 
+        robV_07 = 
+        robV_08 = 
+        robV_09 =
+        robV_10 = 
+      billie
+        bilV_01 = 
+        bilV_02 = 
+        bilV_03 = 
+        bilV_04 = 
+        bilV_05 = 
+        bilV_06 = 
+        bilV_07 = 
+      river
+        rivV_01 = 
+        rivV_02 = 
+        rivV_03 = 
+        rivV_04 = 
+        rivV_05 = 
+        rivV_06 = 
+        rivV_07 = 
+        rivV_08 = 
+        rivV_09 = 
+        rivV_10 = 
+        rivV_11 = 
+        rivV_12 = 
+        rivV_13 = 
+      dusty
+        dusV_01 = 
+        dusV_02 = 
+        dusV_03 = 
+        dusV_04 = 
+        dusV_05 = 
+        dusV_06 = 
+        dusV_07 = 
+        dusV_08 = 
+        dusV_09 = 
+        dusV_10 = 
+        dusV_11 = 
+        dusV_12 = 
+      wanda
+        wanV_01 = 
+        wanV_02 = 
+        wanV_03 = 
+        wanV_04 = 
+        wanV_05 = 
+        wanV_06 = 
+        wanV_07 = 
+        wanV_08 = 
+        wanV_09 = 
+        wanV_10 = 
+        wanV_11 = 
+        wanV_12 = 
+        wanV_13 = 
+      all
+        allV_01 = 
+        addV_02 = 
+ 

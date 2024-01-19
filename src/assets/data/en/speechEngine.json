@@ -1,0 +1,95 @@
+{
+  "speechEngine": {
+    "config": {
+      "en": {
+        "continue": "Press to continue"
+      }
+    },
+    "players": {
+      "en": {
+        "narrator": {
+          "narD_01": "In the heart of the Australian outback, under a vast blue sky, the digital realm thrives thanks to the eSafety relics. These four powerful symbols have long kept the internet safe, allowing Australians to connect and share.",
+          "narD_02": "We’ll have to put our heads together and do a little detective work to find the Investigation gem. We better watch out for Robo Raven’s tricks. When we investigate, we look for what parts of online information might not be true. We also figure out what unsafe content looks like.",
+          "narD_03": "Now that the Investigation Relic is restored we can spot the truth and easily figure out what is safe or unsafe. Always remember to look for clues and question if the things you see online are true.",
+          "narD_04": "Robo Raven has nicked the Respect gem, we’ll need to get it back, let’s take a look at what it means to be respectful. Leaving mean comments, or making people feel left out can be hurtful, respect is about showing kindness and being considerate of other people's feelings.",
+          "narD_05": "Do you see Robo Raven? Being mean online will do no good. By being kind, supportive and respectful, we’ve restored the Respect Relic! When we treat others the way we want to be treated, we are acting in a way that shows respect.",
+          "narD_06": "Without its gem, the Body Clues Relic isn’t working. Let’s see if we can figure out what Dusty is feeling. Our bodies are good at telling us when something is wrong. We just have to know how to listen.",
+          "narD_07": "Listening to our Body Clues with the Relic restored is much easier. When we listen to the signs, we can tell straight away when we are feeling uncomfortable and then ask for help.",
+          "narD_08": "We’ll have to track down Robo Raven to find the Responsibility gem. He hasn’t been very safe with his personal information! If we follow the clues he’s left behind we can restore the Responsibility Relic.",
+          "narD_09": "Posting your personal information online isn’t very responsible. See how quickly we were able to find Robo Raven? Always remember to be careful with what you share online and to protect your personal information.",
+          "narD_10": "We can help Robo Raven see the error of his ways. He’s never been taught how to be safe online, but that’s what the Mighty Heroes do best. Let’s use everything we’ve learned while restoring the Relics and re-connect all four of them to the mainframe. Together, we can make the internet safe again.",
+          "narD_11": "The mainframe is restored and the internet is safe once more!! Keeping the mainframe online means keeping all four relics connected. Even Robo Raven now knows to investigate, to show respect, to listen to body clues and to practice responsibility."
+        },
+        "robo": {
+          "robD_01": "Mwahahaha! You think you’re sooo smart, well too bad, this gem is miiinnneeeee!",
+          "robD_02": "Pleaseee River, you can’t stop me that easily.",
+          "robD_03": "What do you meannn? I know how to use the internet, I basically invented it!",
+          "robD_04": "Ha! I’ll show you.",
+          "robD_05": "Res…resp…responsibility? So that’s what keeps my information safe!",
+          "robD_06": "I always get left out :( why are you being so nice after all I’ve done?",
+          "robD_07": "Well that shook me up a little! Who knew body clues were so important?",
+          "robD_08": "All this time I let my fears control me. The true power was never in stealing the relics, it was in using the skills they hold!",
+          "robD_09": "Wow, I feel… I feel… I feel like myself again!",
+          "robD_10": "Thanks so much, Might Heroes – I owe you one. Now let’s surf the net like the legends we are!"
+        },
+        "billie": {
+          "bilD_01": "Don’t worry, Dusty. We’ll outwit that Raven easily and the Investigate Relic gem  will be returned to its rightful place.",
+          "bilD_02": "But it was worth every trick, because investigating is one of the most important things to do online.",
+          "bilD_03": "Surprise, surprise, Robo Raven’s been at it again.",
+          "bilD_04": "The gem is ours… and the relic restored… Let’s go!",
+          "bilD_05": "I bet Robo Raven is… responsible for it.",
+          "bilD_06": "Coz that’s what mighty heroes do!",
+          "bilD_07": "Hey, I like to call it a bilby-race."
+        },
+        "river": {
+          "rivD_01": "You bet!",
+          "rivD_02": "Okay, team: To recover the gem and activate the Respect relic, we need to learn how to be kind online.",
+          "rivD_03": "How good was that!",
+          "rivD_04": "Just you wait, this way team!",
+          "rivD_05": "I’ve got… I’ve got… a bad feeling about this.",
+          "rivD_06": "Well, my eyes have a bad feeling too, cause I don’t see a gem!",
+          "rivD_07": "Look, a note! \"Bet you can't guess where I've hidden it!” - Robo Raven",
+          "rivD_08": "Woo-hoo! Let’s keep this adventure going, follow me!",
+          "rivD_09": "Wooaahhhhh, what is this place?",
+          "rivD_10": "Agghh!! Robo Raven, I thought we beat you.",
+          "rivD_11": "It’s like I always say – when in doubt, trust your gut!",
+          "rivD_12": "We knew you had it in you, Robo Raven.",
+          "rivD_13": "Kawabunga!"
+        },
+        "dusty": {
+          "dusD_01": "Whyyy you..!",
+          "dusD_02": "Oooooooo, the Respect relic!",
+          "dusD_03": "Even better now we’ve got another Relic activated!",
+          "dusD_04": "That’s exactly what this Body Clue Relic is about! Listen to your body and trust your gut instincts.",
+          "dusD_05": "Let’s smash these puzzles and get it back from Robo Raven!",
+          "dusD_06": "Dun, dun, dun, another one bites the dust..y!",
+          "dusD_07": "Phew, thank heavens, I’m pooped!",
+          "dusD_08": "We did it! We beat Robo Raven’s tricks!",
+          "dusD_09": "It looks like Robo Raven has been messing around online and has disconnected the relics to the mainframe.",
+          "dusD_10": "Exactly! Protecting your privacy protects your safety!",
+          "dusD_11": "Alright gang, let’s put it all together. One last step and we’ll unlock the mainframe!",
+          "dusD_12": "All it took you was a rat-race around Australia!"
+        },
+        "wanda": {
+          "wanD_01": "Phew, that was a tough one!",
+          "wanD_02": "Let’s do it!",
+          "wanD_03": "Where to next?",
+          "wanD_04": "Taaake that Robo Raven!",
+          "wanD_05": "We’re here!",
+          "wanD_06": "Wait, the gem for the responsibility relic is missing!",
+          "wanD_07": "He’s definitely not being responsible though.",
+          "wanD_08": "Let’s complete the puzzles and find that gem!",
+          "wanD_09": "And learned about the importance of responsibility along the way.",
+          "wanD_10": "This is where all the relic’s energies come together to protect us online.",
+          "wanD_11": "No, you didn’t! You’ve never even learnt how to be safe online.",
+          "wanD_12": "Now you’re getting it!",
+          "wanD_13": "All that matters is we taught Robo Raven how to use the internet safely and now he’s one of us."
+        },
+        "all": {
+          "allD_01": "Coooooooollllllllllll",
+          "addD_02": "One of us, one of us!"
+        }
+      }
+    }
+  }
+}

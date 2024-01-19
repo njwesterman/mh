@@ -1,0 +1,69 @@
+{
+    "players": {
+      "fr": {
+        "billie": {
+          "name": "Bille",
+          "color": "lightBlue",
+          "avatarImg": "assets/this/img.svg",
+          "avatarAlt": "assets/this/img.svg",
+          "pixelImg": "assets/this.img.svg",
+          "voiceCode": "bilV",
+          "dialogCode": "bilD"
+        },
+        "river": {
+          "name": "River",
+          "color": "green",
+          "avatarImg": "assets/this/img.svg",
+          "avatarAlt": "assets/this/img.svg",
+          "pixelImg": "assets/this.img.svg",
+          "voiceCode": "rivV",
+          "dialogCode": "rivD"
+        },
+        "dusty": {
+          "name": "Dusty",
+          "color": "orange",
+          "avatarImg": "assets/this/img.svg",
+          "avatarAlt": "assets/this/img.svg",
+          "pixelImg": "assets/this.img.svg",
+          "voiceCode": "dusV",
+          "dialogCode": "dusD"
+        },
+        "wanda": {
+          "name": "Wanda",
+          "color": "yellow",
+          "avatarImg": "assets/this/img.svg",
+          "avatarAlt": "assets/this/img.svg",
+          "pixelImg": "assets/this.img.svg",
+          "voiceCode": "wanV",
+          "dialogCode": "wanD"
+        },
+        "robo": {
+          "name": "Robo Raven",
+          "color": "red",
+          "avatarImg": "assets/this/img.svg",
+          "avatarAlt": "assets/this/img.svg",
+          "pixelImg": "assets/this.img.svg",
+          "voiceCode": "robV",
+          "dialogCode": "robD"
+        },
+        "all": {
+          "name": "All",
+          "color": "pink",
+          "avatarImg": "assets/this/img.svg",
+          "avatarAlt": "assets/this/img.svg",
+          "pixelImg": "assets/this.img.svg",
+          "voiceCode": "allV",
+          "dialogCode": "allD"
+        },
+        "narrator": {
+          "name": "Narrator",
+          "color": "blue",
+          "avatarImg": "assets/this/img.svg",
+          "avatarAlt": "assets/this/img.svg",
+          "pixelImg": "assets/this.img.svg",
+          "voiceCode": "narV",
+          "dialogCode": "narD"
+        }
+      }
+    }
+  }

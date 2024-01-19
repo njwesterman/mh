@@ -1,0 +1,17 @@
+{
+    "general": {
+      "version": "1.0.0",
+      "muteOnStart": "false",
+      "defaultLang": "en"
+    },
+    "speechEngine": {
+      "speedForward": "10",
+      "speedWait": "10",
+      "speedBetweenLines": "10",
+      "speedBetweenParagraphs": "10"
+    },
+    "voiceEngine":{
+      "playerVoicesOn":true,
+      "narratorsVoiceOn":true
+    }
+  }
