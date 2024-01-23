@@ -49,7 +49,17 @@ this.voice.playVoice(voiceToSpeek)
   await this.typeWriter('narrateOutput', textToSay, this.speedForward, this.speedWait, this.speedBetweenLines, 0, false, 5000);
   this.hideNarrationBox();
 
+ } else {
+
+this.showDialogBox(position)
+await this.typeWriter('dialogOutput', textToSay, this.speedForward, this.speedWait, this.speedBetweenLines, 0, false, 5000);
+this.hideDialogBox();
+
+
+
  }
+
+
 
 
 

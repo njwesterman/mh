@@ -18,6 +18,7 @@ speechData = [];
 speechConfig = [];
 voiceData = [];
 playerData = [];
+soundData = [];
 
 languageCode = 'en'
 
@@ -26,6 +27,7 @@ constructor(private http: HttpClient) {
   this.loadPlayers().subscribe();
   this.loadSpeechData().subscribe();
   this.loadVoiceData().subscribe();
+  this.loadSoundData().subscribe();
 }
 
 
@@ -88,6 +90,18 @@ constructor(private http: HttpClient) {
     ));
 
     }
+
+    loadSoundData(): Observable<any> {
+      console.log('start')
+     
+      return this.http.get('./assets/data/'+this.languageCode+'/soundEngine.json').pipe(
+              tap(data => {this.soundData = data;
+            //   console.log('data');
+              //  console.log(data)
+              }
+      ));
+  
+      }
 
 
     async sleep(ms) {

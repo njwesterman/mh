@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Howl, Howler } from 'howler';
+import { Howl} from 'howler';
 
 
 @Injectable({
@@ -20,6 +20,7 @@ console.log("playing voice - " + src)
       html5: true,
       loop: false,
       autoplay: true,
+      buffer: true,
       preload: true,
       onend: () => {
         //  this.playbackEnded = true;

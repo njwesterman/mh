@@ -2,8 +2,8 @@
     "soundEngine": {
         "background": {
           "bg01": {
-            "source": "",
-            "description": ""
+            "source": "../../assets/sounds/en/background/calm-of-the-cosmos-165862.mp3",
+            "description": "Calm background music"
           },
           "bg02": {
             "source": "",

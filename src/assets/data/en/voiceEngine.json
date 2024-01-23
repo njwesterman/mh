@@ -4,7 +4,7 @@
           "narrator": {
             "narV_01": "../../assets/voice/en/narV_01.wav",
             "narV_02": "../../assets/voice/en/narV_02.wav",
-            "narV_03": "",
+            "narV_03": "../../assets/voice/en/narV_03.wav",
             "narV_04": "",
             "narV_05": "",
             "narV_06": "",
@@ -15,7 +15,7 @@
             "narV_11": ""
           },
           "robo": {
-            "robV_01": "",
+            "robV_01": "../../assets/voice/en/robV_01.wav",
             "robV_02": "",
             "robV_03": "",
             "robV_04": "",
@@ -27,8 +27,8 @@
             "robV_10": ""
           },
           "billie": {
-            "bilV_01": "",
-            "bilV_02": "",
+            "bilV_01": "../../assets/voice/en/bilV_01.wav",
+            "bilV_02": "../../assets/voice/en/bilV_02.wav",
             "bilV_03": "",
             "bilV_04": "",
             "bilV_05": "",
@@ -36,7 +36,7 @@
             "bilV_07": ""
           },
           "river": {
-            "rivV_01": "",
+            "rivV_01": "../../assets/voice/en/rivV_01.wav",
             "rivV_02": "",
             "rivV_03": "",
             "rivV_04": "",
@@ -51,7 +51,7 @@
             "rivV_13": ""
           },
           "dusty": {
-            "dusV_01": "",
+            "dusV_01": "../../assets/voice/en/dusV_01.wav",
             "dusV_02": "",
             "dusV_03": "",
             "dusV_04": "",
@@ -65,7 +65,7 @@
             "dusV_12": ""
           },
           "wanda": {
-            "wanV_01": "",
+            "wanV_01": "../../assets/voice/en/wanV_01.wav",
             "wanV_02": "",
             "wanV_03": "",
             "wanV_04": "",
