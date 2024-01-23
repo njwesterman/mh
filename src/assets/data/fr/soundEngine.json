@@ -1,0 +1,48 @@
+{
+    "soundEngine": {
+        "background": {
+          "bg01": {
+            "source": "",
+            "description": ""
+          },
+          "bg02": {
+            "source": "",
+            "description": ""
+          },
+          "bg03": {
+            "source": "",
+            "description": ""
+          },
+          "bg04": {
+            "source": "",
+            "description": ""
+          },
+          "bg05": {
+            "source": "",
+            "description": ""
+          }
+        },
+        "fx": {
+          "fx01": {
+            "source": "",
+            "description": ""
+          },
+          "fx02": {
+            "source": "",
+            "description": ""
+          },
+          "fx03": {
+            "source": "",
+            "description": ""
+          },
+          "fx04": {
+            "source": "",
+            "description": ""
+          },
+          "fx05": {
+            "source": "",
+            "description": ""
+          }
+        }
+      }
+    }

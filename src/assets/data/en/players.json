@@ -1,6 +1,5 @@
 {
     "players": {
-      "en": {
         "billie": {
           "name": "Bille",
           "color": "lightBlue",
@@ -66,4 +65,3 @@
         }
       }
     }
-  }

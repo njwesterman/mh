@@ -1,10 +1,9 @@
 {
     "voiceEngine": {
       "players": {
-        "en": {
           "narrator": {
-            "narV_01": "",
-            "narV_02": "",
+            "narV_01": "../../assets/voice/en/narV_01.wav",
+            "narV_02": "../../assets/voice/en/narV_02.wav",
             "narV_03": "",
             "narV_04": "",
             "narV_05": "",
@@ -87,4 +86,3 @@
         }
       }
     }
-  }

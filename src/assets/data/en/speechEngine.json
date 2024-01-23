@@ -1,12 +1,9 @@
 {
   "speechEngine": {
     "config": {
-      "en": {
         "continue": "Press to continue"
-      }
     },
     "players": {
-      "en": {
         "narrator": {
           "narD_01": "In the heart of the Australian outback, under a vast blue sky, the digital realm thrives thanks to the eSafety relics. These four powerful symbols have long kept the internet safe, allowing Australians to connect and share.",
           "narD_02": "We’ll have to put our heads together and do a little detective work to find the Investigation gem. We better watch out for Robo Raven’s tricks. When we investigate, we look for what parts of online information might not be true. We also figure out what unsafe content looks like.",
@@ -92,4 +89,3 @@
       }
     }
   }
-}

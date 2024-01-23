@@ -15,10 +15,14 @@ import { environment } from 'src/environments/environment';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   standalone: true,
-  imports: [CommonModule,IonApp, IonRouterOutlet, IonButton],
+  imports: [CommonModule,IonApp, IonRouterOutlet, IonButton ],
 })
 
 
 export class AppComponent   {
+  
+
+
+
 
 }

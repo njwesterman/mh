@@ -1,12 +1,9 @@
 {
   "speechEngine": {
     "config": {
-      "for": {
         "continue": "Appuyez pour continuer"
-      }
     },
     "players": {
-      "fr": {
         "narrator": {
           "narD_01": "Au cœur de l'outback australien, sous un vaste ciel bleu, le royaume numérique prospère grâce aux reliques d'eSafety. Ces quatre symboles puissants assurent depuis longtemps la sécurité d'Internet, permettant aux Australiens de se connecter et de partager.",
           "narD_02": "Nous devrons réfléchir ensemble et faire un petit travail de détective pour trouver le joyau de l'enquête. Nous ferions mieux de faire attention aux astuces de Robo Raven. Lorsque nous enquêtons, nous recherchons quelles parties des informations en ligne pourraient ne pas être vrai. Nous déterminons également à quoi ressemble le contenu dangereux.",
@@ -92,4 +89,3 @@
       }
     }
   }
-}

@@ -7,8 +7,8 @@ import { NgModule } from '@angular/core';
 import { Howl, Howler } from 'howler';
 import gsap from "gsap";
 import { Observable, Subscription, fromEvent } from 'rxjs';
-import { speechService } from '../services/speech.service';
-import { SpeechComponent } from '../shared/speech/speech.component';
+import { SpeechService } from '../../services/speech.service';
+import { SpeechComponent } from '../../shared/speech/speech.component';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +19,7 @@ import { SpeechComponent } from '../shared/speech/speech.component';
 })
 export class HomePage implements AfterViewInit, OnDestroy {
   @ViewChild('parentContainer') parentContainer: ElementRef;
-  constructor(public navCtrl: NavController, public speechService: speechService) { }
+  constructor(public navCtrl: NavController, public speechService: SpeechService) { }
   imgSrc = './assets/sandbox/relic-respect-off.png'
   speech2 = './assets/sandbox/speech/blank.png';
   speech1 = './assets/sandbox/speech/blank.png';
@@ -303,7 +303,7 @@ export class HomePage implements AfterViewInit, OnDestroy {
     this.imgSrcMouse = './assets/sandbox/relic-respect-off.png'
     this.width = this.parentContainer.nativeElement.offsetWidth;
    
-    await this.speechService.startTyping();
+    await this.speechService.startTyping0();
 
 
    
@@ -322,7 +322,7 @@ export class HomePage implements AfterViewInit, OnDestroy {
         await sleep(5000); // Sleep for 2 seconds
         this.speech1 = './assets/sandbox/speech/blank.png';
 
-        await this.speechService.startDialog();
+        await this.speechService.startDialog0();
 
        
 
@@ -340,6 +340,10 @@ export class HomePage implements AfterViewInit, OnDestroy {
     this.tween3.invalidate();
   }
   async ionViewDidEnter() {
+
+
+
+
     //this.scene1()
     //this.scene3()
     this.howl = new Howl({
@@ -363,7 +367,9 @@ export class HomePage implements AfterViewInit, OnDestroy {
   }
   movetohome() {
     this.howl.stop();
-    this.navCtrl.navigateRoot("/preloading");
+    alert('lets not. bye bye')
+
+    //this.navCtrl.navigateRoot("/preloading");
   }
   async toggleSrc() {
     if (this.canClick) {

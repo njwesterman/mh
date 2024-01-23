@@ -1,6 +1,5 @@
 voiceEngine
    players
-    en
       narrator
         narV_01 =
         narV_02 =

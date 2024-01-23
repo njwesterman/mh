@@ -10,6 +10,7 @@ import { Subscription, interval } from 'rxjs';
 import { Howl, Howler } from 'howler';
 import { SwUpdate } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
+import { GlobalService } from '../services/global.service';
 @Component({
   selector: 'app-preloading',
   templateUrl: './preloading.page.html',
@@ -23,7 +24,7 @@ export class PreloadingPage implements OnInit {
   isDesktop = false;
   isServiceWorkerRunning = false;
   serviceWorkerReady = 'Checking for Service Worker'
-  constructor(private updates: SwUpdate, public navCtrl: NavController,
+  constructor(private updates: SwUpdate, public navCtrl: NavController, public gs : GlobalService,
     private platform: Platform
   ) {
     console.log('UpdateService: Constructor', updates.isEnabled);
@@ -43,16 +44,21 @@ export class PreloadingPage implements OnInit {
           case 'VERSION_READY':
             console.log(`Current app version: ${evt.currentVersion.hash}`);
             console.log(`New app version ready for use: ${evt.latestVersion.hash}`);
+            this.versionCheck = 'Checking Version...'
             await updates.activateUpdate();
-            this.versionReady = true
+     //    add in a sleep command here
             this.versionCheck = 'Ready to go!'
+            this.versionReady = true
+           
             location.reload();
+           
             break;
           case 'VERSION_INSTALLATION_FAILED':
             this.versionCheck = 'Error installing new version'
             console.log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
             break;
           case 'NO_NEW_VERSION_DETECTED':
+      //      await this.gs.loadData();
             this.versionCheck = 'Ready to go!'
             this.versionReady = true
             console.log("You are on the latest version");
@@ -67,17 +73,8 @@ export class PreloadingPage implements OnInit {
     //  let audioPlayer = <HTMLVideoElement> document.getElementById("myVideo");
     //  audioPlayer.play();
     if (this.updates.isEnabled && environment.production && this.isDesktop) {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/ngsw-worker.js').then((registration) => {
-          console.log(registration);
-          registration.installing; // the installing worker, or undefined
-          registration.waiting; // the waiting worker, or undefined
-          registration.active; // the active worker, or undefined
-          registration.addEventListener('updatefound', () => {
-            this.updateServiceWorker(registration);
-          });
-        });
-      }
+      this.versionCheck = 'Checking Version...'
+      await this.updates.checkForUpdate();
     } else {
       this.versionReady = true
     }
@@ -107,4 +104,8 @@ export class PreloadingPage implements OnInit {
   movetohome() {
     this.navCtrl.navigateRoot("/home");
   }
+movetohome2(){
+  this.navCtrl.navigateRoot('investigate/intro');
+}
+
 }

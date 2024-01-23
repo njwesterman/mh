@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import anime from 'animejs/lib/anime.es';
-import { speechService } from '../services/speech.service';
-import { SpeechComponent } from '../shared/speech/speech.component';
-
+import { SpeechService } from '../../services/speech.service';
+import { SpeechComponent } from '../../shared/speech/speech.component';
+import {GlobalService} from '../../services/global.service';
 
 @Component({
   selector: 'app-mod1',
@@ -16,15 +16,16 @@ import { SpeechComponent } from '../shared/speech/speech.component';
 })
 export class Mod1Page {
 
-  constructor(public speechService: speechService ) { }
+  constructor(public speechService: SpeechService, public gs: GlobalService ) { }
 
   ngOnInit() {
   }
 
   async ionViewDidEnter(){
 
+
   //await this.speechService.startTyping();
- await this.speechService.startDialog();
+ //await this.speechService.startDialog0();
 
 }
 

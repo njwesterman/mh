@@ -1,7 +1,7 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { Subscription } from 'rxjs/internal/Subscription';
-import { speechService } from 'src/app/services/speech.service';
+import { SpeechService } from 'src/app/services/speech.service';
 
 @Component({
   selector: 'app-speech',
@@ -15,12 +15,14 @@ export class SpeechComponent implements OnInit, OnDestroy {
   showNarrate: boolean;
   showDialog: boolean;
   positionTop: boolean;
+  showContinue: boolean;
 
   private narrateSub: Subscription;
   private dialogSub: Subscription;
   private positionSub: Subscription;
+  private continueSub: Subscription;
 
-  constructor(private speechService: speechService) { }
+  constructor(private speechService: SpeechService) { }
 
   ngOnInit() {
     this.narrateSub = this.speechService.showNarration$.subscribe(show => {
@@ -32,6 +34,9 @@ export class SpeechComponent implements OnInit, OnDestroy {
     this.positionSub = this.speechService.positionTop$.subscribe(show => {
       this.positionTop = show;
     });
+    this.continueSub = this.speechService.showContinue$.subscribe(show => {
+      this.showContinue = show;
+    });
 
   }
 
@@ -40,6 +45,7 @@ export class SpeechComponent implements OnInit, OnDestroy {
     this.narrateSub.unsubscribe();
     this.dialogSub.unsubscribe();
 this.positionSub.unsubscribe();
+this.continueSub.unsubscribe();
   }
 }
   
