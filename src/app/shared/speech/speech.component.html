@@ -1,26 +1,31 @@
 
-<div class='c-narrate' [class.hide]="!showNarrate" [class.top]='positionTop'>
+<div class='c-narrate' [class.hide]="!showNarrate" [ngClass]='position'>
 
 <div class='c-narrate__container' id='narrateOutput'>
  <span class="cursor"></span>
     
-<img [class.hide]="!showContinue" class='c-speech__down-arrow' src='./assets/speech/speech_down_arrow.svg' />
+
+
+
+<img [class.hide]="!showContinue" class='c-speech__next--arrow' src='./assets/speech/speech_arrow_next.svg' />
 </div>
+
+
 </div>
   
 
 
-<div class='c-speech' [class.hide]="!showDialog" [class.top]='positionTop'>
+<div class='c-speech' [class.hide]="!showDialog" [ngClass]='position'>
 <div class='c-speech__container' >
-<div class='c-speech__nametag' style="background-image:url('../../../assets/speech/name_tag.svg')"><span class='c-speech__nametag-name'>River</span></div>
+<div class='c-speech__nametag' style="color:{{avatarFontColor}};background-color:{{avatarColor}};"><span class='c-speech__nametag--name'>{{avatarName}}</span></div>
 
 <div class='c-speech__avatar'>
-<div class='c-speech__avatar-image' style="background-image: url('../../../assets/speech/avatar_river.png')"></div>
+<div class='c-speech__avatar--image' style="background-image: url('{{avatarImg}}')"></div>
 </div>
 <div class='c-speech__dialog' id='dialogOutput'>
  <span class="cursor"></span>
     
-<img class='c-speech__down-arrow' src='./assets/speech/speech_down_arrow.svg' />
+<img [class.hide]="!showContinue"  class='c-speech__next--arrow' src='./assets/speech/speech_arrow_next.svg' />
 </div>
 
 </div>

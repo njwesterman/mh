@@ -4,7 +4,7 @@
           "name": "Bille",
           "color": "lightBlue",
           "avatarImg": "assets/this/img.svg",
-          "avatarAlt": "assets/this/img.svg",
+          "avatarAltImg": "assets/this/img.svg",
           "pixelImg": "assets/this.img.svg",
           "voiceCode": "bilV",
           "dialogCode": "bilD"
@@ -13,7 +13,7 @@
           "name": "River",
           "color": "green",
           "avatarImg": "assets/this/img.svg",
-          "avatarAlt": "assets/this/img.svg",
+          "avatarAltImg": "assets/this/img.svg",
           "pixelImg": "assets/this.img.svg",
           "voiceCode": "rivV",
           "dialogCode": "rivD"
@@ -22,7 +22,7 @@
           "name": "Dusty",
           "color": "orange",
           "avatarImg": "assets/this/img.svg",
-          "avatarAlt": "assets/this/img.svg",
+          "avatarAltImg": "assets/this/img.svg",
           "pixelImg": "assets/this.img.svg",
           "voiceCode": "dusV",
           "dialogCode": "dusD"
@@ -31,7 +31,7 @@
           "name": "Wanda",
           "color": "yellow",
           "avatarImg": "assets/this/img.svg",
-          "avatarAlt": "assets/this/img.svg",
+          "avatarAltImg": "assets/this/img.svg",
           "pixelImg": "assets/this.img.svg",
           "voiceCode": "wanV",
           "dialogCode": "wanD"
@@ -40,7 +40,7 @@
           "name": "Robo Raven",
           "color": "red",
           "avatarImg": "assets/this/img.svg",
-          "avatarAlt": "assets/this/img.svg",
+          "avatarAltImg": "assets/this/img.svg",
           "pixelImg": "assets/this.img.svg",
           "voiceCode": "robV",
           "dialogCode": "robD"
@@ -49,7 +49,7 @@
           "name": "All",
           "color": "pink",
           "avatarImg": "assets/this/img.svg",
-          "avatarAlt": "assets/this/img.svg",
+          "avatarAltImg": "assets/this/img.svg",
           "pixelImg": "assets/this.img.svg",
           "voiceCode": "allV",
           "dialogCode": "allD"
@@ -58,7 +58,7 @@
           "name": "Narrator",
           "color": "blue",
           "avatarImg": "assets/this/img.svg",
-          "avatarAlt": "assets/this/img.svg",
+          "avatarAltImg": "assets/this/img.svg",
           "pixelImg": "assets/this.img.svg",
           "voiceCode": "narV",
           "dialogCode": "narD"

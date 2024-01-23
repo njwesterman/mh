@@ -3,7 +3,7 @@ players
       name=Bille
       color=lightBlue
       avatarImg=assets/this/img.svg
-      avatarAlt=assets/this/img.svg
+      avatarAltImg=assets/this/img.svg
       pixelImg=assets/this.img.svg
       voiceCode=bl
       dialogCode=bl
@@ -11,7 +11,7 @@ players
       name=River
       color=green
       avatarImg=assets/this/img.svg
-      avatarAlt=assets/this/img.svg
+      avatarAltImg=assets/this/img.svg
       pixelImg=assets/this.img.svg
       voiceCode=riverV
       dialogCode=riverD
@@ -19,7 +19,7 @@ players
       name=Dusty
       color=orange
       avatarImg=assets/this/img.svg
-      avatarAlt=assets/this/img.svg
+      avatarAltImg=assets/this/img.svg
       pixelImg=assets/this.img.svg
       voiceCode=dustyV
       dialogCode=dustyD
@@ -27,7 +27,7 @@ players
       name=Wanda
       color=yellow
       avatarImg=assets/this/img.svg
-      avatarAlt=assets/this/img.svg
+      avatarAltImg=assets/this/img.svg
       pixelImg=assets/this.img.svg
       voiceCode=wandaV
       dialogCode=wandaD
@@ -35,7 +35,7 @@ players
       name=Robo Raven
       color=red
       avatarImg=assets/this/img.svg
-      avatarAlt=assets/this/img.svg
+      avatarAltImg=assets/this/img.svg
       pixelImg=assets/this.img.svg
       voiceCode=roboV
       dialogCode=roboD
@@ -43,7 +43,7 @@ players
       name=All
       color=pink
       avatarImg=assets/this/img.svg
-      avatarAlt=assets/this/img.svg
+      avatarAltImg=assets/this/img.svg
       pixelImg=assets/this.img.svg
       voiceCode=allV
       dialogCode=allD
@@ -51,7 +51,7 @@ players
       name=Narrator
       color=blue
       avatarImg=assets/this/img.svg
-      avatarAlt=assets/this/img.svg
+      avatarAltImg=assets/this/img.svg
       pixelImg=assets/this.img.svg
       voiceCode=narV
       dialogCode=narD

@@ -1,7 +1,10 @@
-.top{
+.p1{
   bottom:76% !important;
 }
 
+.p0{
+  bottom:4%;
+}
 
 
 .c-narrate {
@@ -9,7 +12,7 @@
   left: 4%;
   margin: auto;
   height: 20%;
-  bottom: 4%;
+  
   z-index:100000;
   display: flex;
   border-radius: 20px;
@@ -24,10 +27,11 @@
   background-size: 100% 100%;
 
 
-  &__down-arrow {
+  &__next--arrow {
     bottom: 12%;
     left: 96%;
     width: 2%;
+    height:15%;
     position: absolute;
   }
 
@@ -92,9 +96,10 @@
   height: 20%;
   background: rgb(11, 33, 63, 0.7);
 
-  &__down-arrow {
+  &__next--arrow {
     bottom: 12%;
     left: 96%;
+    height:15%;
     width: 2%;
     position: absolute;
   }
@@ -110,27 +115,16 @@
     align-content: center;
   }
 
-  span {
-    font-family: Poppins;
-    font-weight: 500;
-    left: 2%;
-    width:98%;
-    line-height: 45.60px;
-    position: relative;
-    font-size: 2.2em;
-    word-wrap: break-word;
-  }
+  
 
-  span.cursor::after {
-    height: 26px;
-    width: 15px;
-  }
+
 
   margin: auto;
-  bottom: 4%;
+  
   display: flex;
   border-radius: 20px;
   position: fixed;
+  
 
   &__nametag {
     background-position: center center;
@@ -144,9 +138,9 @@
     z-index: 20;
     bottom: 90%;
 
-    &-name {
-      color: white;
-      font-size: 32px;
+    &--name {
+      font-size: 1.2cqw;
+
       font-family: 'Poppins';
       line-height: 55.6px !important;
       font-weight: 800;
@@ -168,6 +162,23 @@
     width: 90%;
     justify-content: flex-start;
     align-items: center;
+
+    span {
+      font-family: Poppins;
+      font-weight: 500;
+      left: 2%;
+      width:98%;
+      line-height: 45.60px;
+      position: relative;
+      font-size: 2cqw;
+      word-wrap: break-word;
+    }
+  
+    span.cursor::after {
+      height: 26px;
+      width: 15px;
+    }
+
   }
 
   &__avatar {
@@ -182,7 +193,7 @@
     background-color: rgb(44, 64, 92, 0.8);
     width: 10%;
 
-    &-image {
+    &--image {
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 96%;

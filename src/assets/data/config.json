@@ -13,5 +13,38 @@
     "voiceEngine":{
       "playerVoicesOn":true,
       "narratorsVoiceOn":true
+    },
+    "themes": {
+      "investigate": {
+        "speechBubble": "assets/speech/bubbles/investigate_bubble.svg",
+        "mainHex": "#9BEDED",
+        "fontColor":"#2E1600"
+      },
+      "respect": {
+        "speechBubble":  "assets/speech/bubbles/respect_bubble.svg",
+        "mainHex": "#00D88A",
+        "fontColor":"#2E1600"
+      },
+      "body": {
+        "speechBubble":  "assets/speech/bubbles/body_bubble.svg",
+        "mainHex": "#FEB35B",
+        "fontColor":"#2E1600"
+      },
+      "responsibility": {
+        "speechBubble":  "assets/speech/bubbles/responsibilty_bubble.svg",
+        "mainHex": "#FFE7AB",
+        "fontColor":"#2E1600"
+      },
+      "final": {
+        "speechBubble":  "assets/speech/bubbles/final_bubble.svg",
+        "mainHex": "#83AFE2",
+        "fontColor":"#2E1600"
+      },
+      "system": {
+        "speechBubble": "",
+        "mainHex": "#000",
+        "fontColor":"#2E1600"
+      }
     }
   }
+  

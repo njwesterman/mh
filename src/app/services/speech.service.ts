@@ -17,8 +17,24 @@ export class SpeechService {
   showDialog$ = this._showDialog.asObservable();
   private _showContinue = new BehaviorSubject<boolean>(false);
   showContinue$ = this._showContinue.asObservable();
-  private _positionTop = new BehaviorSubject<boolean>(false);
-  positionTop$ = this._positionTop.asObservable();
+  private _position = new BehaviorSubject<string>('pos0');
+  position$ = this._position.asObservable();
+
+  private _avatarName = new BehaviorSubject<string>('');
+  avatarName$ = this._avatarName.asObservable();
+
+  private _avatarImg = new BehaviorSubject<string>('');
+  avatarImg$ = this._avatarImg.asObservable();
+
+  private _avatarAltImg = new BehaviorSubject<string>('');
+  avatarAltImg$ = this._avatarAltImg.asObservable();
+
+  private _avatarColor = new BehaviorSubject<string>('');
+  avatarColor$ = this._avatarColor.asObservable();
+
+  private _avatarFontColor = new BehaviorSubject<string>('');
+  avatarFontColor$ = this._avatarFontColor.asObservable();
+
 
   constructor(public gs : GlobalService, public voice: VoiceService) { }
   speedForward: number = 10 //Typing Speed
@@ -28,12 +44,11 @@ export class SpeechService {
   showNarration: boolean = false;
   showDialog: boolean = false;
   showContinue:boolean = false;
-  
+ 
+
+  async loadDialog(who, code, position, voice, useAlt,theme){
 
 
-
-
-  async loadDialog(who, code, position, voice){
 
 console.log(this.gs.speechConfig['continue'] )
  let textToSay = ((this.gs.speechData['speechEngine']['players'][who][code]))
@@ -50,6 +65,28 @@ this.voice.playVoice(voiceToSpeek)
   this.hideNarrationBox();
 
  } else {
+
+
+
+ this._avatarName.next((this.gs.playerData['players'][who]['name']));
+ 
+ if(useAlt){
+  this._avatarAltImg.next(this.gs.playerData['players'][who]['avatarAltImg'])
+ } else {
+  
+  this._avatarImg.next(this.gs.playerData['players'][who]['avatarImg']) 
+
+ }
+
+//robo raven should alway be in red
+if(who === 'robo'){
+ this._avatarColor.next(this.gs.playerData['players'][who]['color'])
+this._avatarFontColor.next('#ffffff')
+
+} else {
+  this._avatarColor.next(this.gs.configData['themes'][theme]['mainHex'])
+  this._avatarFontColor.next(this.gs.configData['themes'][theme]['fontColor'])
+}
 
 this.showDialogBox(position)
 await this.typeWriter('dialogOutput', textToSay, this.speedForward, this.speedWait, this.speedBetweenLines, 0, false, 5000);
@@ -99,23 +136,18 @@ this.hideDialogBox();
 //END - THIS CAN BE DELETED
 
   showDialogBox(position) {
-    if(position==='top'){
-      this._positionTop.next(true);
-    } else {
-      this._positionTop.next(false);
-    }
-    this._showDialog.next(true);
+    
+
+      this._position.next(position);
+      this._showDialog.next(true);
   }
   hideDialogBox() {
     this._showDialog.next(false);
     this._showContinue.next(false)
   }
   showNarrationBox(position) {
-    if(position==='top'){
-      this._positionTop.next(true);
-    } else {
-      this._positionTop.next(false);
-    }
+    
+      this._position.next(position);
     this._showContinue.next(false);
     this._showNarration.next(true);
   }

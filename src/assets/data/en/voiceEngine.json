@@ -12,7 +12,8 @@
             "narV_08": "",
             "narV_09": "",
             "narV_10": "",
-            "narV_11": ""
+            "narV_11": "",
+            "narV_100": "../../assets/voice/en/narV_100.wav"
           },
           "robo": {
             "robV_01": "../../assets/voice/en/robV_01.wav",
