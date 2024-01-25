@@ -1,20 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Howl} from 'howler';
-
-
+import { Howl } from 'howler';
 @Injectable({
   providedIn: 'root'
 })
 export class VoiceService {
-
   howlVoice: Howl;
-  
   constructor() { }
-
-  playVoice(src){
-
-console.log("playing voice - " + src)
-
+  playVoice(src) {
+    console.log("playing voice - " + src)
     this.howlVoice = new Howl({
       src: src,
       html5: true,
@@ -26,17 +19,9 @@ console.log("playing voice - " + src)
         //  this.playbackEnded = true;
       }
     });
-
-this.howlVoice.play();
-
+    this.howlVoice.play();
   }
-
-stopVoice(){
-  
-  this.howlVoice.stop();
-  
-}
-
-
-
+  stopVoice() {
+    this.howlVoice.stop();
+  }
 }

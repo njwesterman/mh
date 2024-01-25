@@ -102,7 +102,7 @@ export class PreloadingPage implements OnInit {
     //await this.localizationService.setInitialAppLanguage();
   }
   movetohome() {
-//   this.navCtrl.navigateRoot("/home");
+   this.navCtrl.navigateRoot("/home");
 //this.navCtrl.navigateRoot('no/no');
   }
 

@@ -303,9 +303,11 @@ export class HomePage implements AfterViewInit, OnDestroy {
     this.imgSrcMouse = './assets/sandbox/relic-respect-off.png'
     this.width = this.parentContainer.nativeElement.offsetWidth;
    
-    await this.speechService.startTyping0();
+    //await this.speechService.startTyping0();
 
+    await this.speechService.loadDialog("narrator",'narD_01','p1','',false,'investigate')
 
+    
    
     this.tween1 = gsap.to(".weasel", {
       duration: 2,
@@ -322,9 +324,8 @@ export class HomePage implements AfterViewInit, OnDestroy {
         await sleep(5000); // Sleep for 2 seconds
         this.speech1 = './assets/sandbox/speech/blank.png';
 
-        await this.speechService.startDialog0();
-
-       
+        
+        //await this.speechService.loadDialog("river",'rivD_100','p1','',false,'investigate')
 
         await this.scene2();
       },
