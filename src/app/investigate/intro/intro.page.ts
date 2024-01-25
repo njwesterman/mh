@@ -22,16 +22,16 @@ export class IntroPage implements OnInit {
 
     this.gs.loadVoiceData().subscribe(async () => {
       this.sound.playBackground('bg01')    
-      await this.speech.loadDialog("narrator",'narD_01','p0','narV_01',false,'investigate')
-      await this.speech.loadDialog("narrator",'narD_100','p0','narV_100',false,'investigate')
+      await this.speech.loadDialog("narrator",'narD_01','p0','FAILnarV_01',false,'investigate')
+      await this.speech.loadDialog("narrator",'narD_100','p0','FAILnarV_100',false,'investigate')
 
-      await this.speech.loadDialog("robo",'robD_01','p0','robV_01', false,'investigate')
-      await this.speech.loadDialog("dusty",'dusD_01','p0','dusV_01', false,'investigate')
-      await this.speech.loadDialog("billie",'bilD_01','p0','bilV_01', false,'investigate')
-      await  this.speech.loadDialog("narrator",'narD_02','p0','narV_02', false,'investigate')
+      await this.speech.loadDialog("robo",'robD_01','p0','FAILrobV_01', false,'investigate')
+      await this.speech.loadDialog("dusty",'dusD_01','p0','FAILdusV_01', false,'investigate')
+      await this.speech.loadDialog("billie",'bilD_01','p0','FAILbilV_01', false,'investigate')
+      await  this.speech.loadDialog("narrator",'narD_02','p0','FAILnarV_02', false,'investigate')
       
 
-      alert("SSSSHHHHHH THIS WASN'T HERE!")
+      alert("NO MORE")
     });
 
 

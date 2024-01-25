@@ -31,7 +31,7 @@ export const routes: Routes = [
     loadComponent: () => import('./main/home/home.page').then( m => m.HomePage)
   },
   {
-    path: 'no/no',
+    path: 'chat',
     loadComponent: () => import('./investigate/intro/intro.page').then( m => m.IntroPage)
   },
   {
