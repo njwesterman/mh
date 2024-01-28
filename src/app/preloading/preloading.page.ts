@@ -46,19 +46,15 @@ export class PreloadingPage implements OnInit {
             console.log(`New app version ready for use: ${evt.latestVersion.hash}`);
             this.versionCheck = 'Checking Version...'
             await updates.activateUpdate();
-     //    add in a sleep command here
             this.versionCheck = 'Ready to go!'
             this.versionReady = true
-           
             location.reload();
-           
             break;
           case 'VERSION_INSTALLATION_FAILED':
             this.versionCheck = 'Error installing new version'
             console.log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
             break;
           case 'NO_NEW_VERSION_DETECTED':
-      //      await this.gs.loadData();
             this.versionCheck = 'Ready to go!'
             this.versionReady = true
             console.log("You are on the latest version");
