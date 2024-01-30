@@ -10,7 +10,7 @@ import { Subscription, interval } from 'rxjs';
 import { Howl, Howler } from 'howler';
 import { SwUpdate } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
-import { GlobalService } from '../services/global.service';
+import { GlobalService } from '../../services/global.service';
 @Component({
   selector: 'app-preloading',
   templateUrl: './preloading.page.html',

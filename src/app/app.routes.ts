@@ -2,21 +2,21 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: 'sandbox/home',
     loadComponent: () => import('./sandbox/home/home.page').then((m) => m.HomePage),
   },
   {
-    path: '',
-    redirectTo: 'preloading',
-    pathMatch: 'full',
+    path: 'sandbox/preloading',
+    loadComponent: () => import('./sandbox/preloading/preloading.page').then( m => m.PreloadingPage)
   },
   {
-    path: 'preloading',
-    loadComponent: () => import('./preloading/preloading.page').then( m => m.PreloadingPage)
-  },
-  {
-    path: 'mod1',
+    path: 'sandbox/mod1',
     loadComponent: () => import('./sandbox/mod1/mod1.page').then( m => m.Mod1Page)
+  },
+  {
+    path: '',
+    redirectTo: '/sandbox/preloading',
+    pathMatch: 'full',
   },
   {
     path: 'main/intro',
@@ -31,7 +31,7 @@ export const routes: Routes = [
     loadComponent: () => import('./main/home/home.page').then( m => m.HomePage)
   },
   {
-    path: 'chat',
+    path: 'investigate/introionic ',
     loadComponent: () => import('./investigate/intro/intro.page').then( m => m.IntroPage)
   },
   {
