@@ -2,7 +2,6 @@ import { ApplicationRef, Component, OnDestroy} from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
 import { IonApp, IonRouterOutlet, NavController, IonButton, Platform, isPlatform } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';  
-import { ButtonComponent } from '../shared/button/button.component';
 
 import { environment } from 'src/environments/environment';
 import { GlobalService } from '../services/global.service';
@@ -16,7 +15,7 @@ import { GlobalService } from '../services/global.service';
   templateUrl: './preflight.page.html',
   styleUrls: ['./preflight.page.scss'],
   standalone: true,
-  imports: [CommonModule,IonApp, IonRouterOutlet, IonButton,ButtonComponent ],
+  imports: [CommonModule,IonApp, IonRouterOutlet, IonButton ],
 
 })
 export class PreflightPage  {
