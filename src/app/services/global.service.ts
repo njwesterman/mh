@@ -14,6 +14,10 @@ export class GlobalService {
   playerData = [];
   soundData = [];
   languageCode = 'en'
+  versionReady = false;
+  isDesktop = false;
+
+
   constructor(private http: HttpClient) {
     this.loadConfig().subscribe();
     this.loadPlayers().subscribe();

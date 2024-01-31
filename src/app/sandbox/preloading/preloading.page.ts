@@ -27,53 +27,11 @@ export class PreloadingPage implements OnInit {
   constructor(private updates: SwUpdate, public navCtrl: NavController, public gs : GlobalService,
     private platform: Platform
   ) {
-    console.log('UpdateService: Constructor', updates.isEnabled);
-    if ((!isPlatform('ios') && !isPlatform('android')) && (!isPlatform('capacitor') || isPlatform('mobileweb') || isPlatform('desktop'))) {
-      this.isDesktop = true
-    }
-
-    if (updates.isEnabled && environment.production && this.isDesktop) {
-      this.isServiceWorkerRunning = true;
-      updates.versionUpdates.subscribe(async evt => {
-        console.log('UpdateService: versionUpdates', evt);
-        switch (evt.type) {
-          case 'VERSION_DETECTED':
-            this.versionCheck = 'Downloading Latest Version...'
-            console.log(`Downloading new app version: ${evt.version.hash}`);
-            break;
-          case 'VERSION_READY':
-            console.log(`Current app version: ${evt.currentVersion.hash}`);
-            console.log(`New app version ready for use: ${evt.latestVersion.hash}`);
-            this.versionCheck = 'Checking Version...'
-            await updates.activateUpdate();
-            this.versionCheck = 'Ready to go!'
-            this.versionReady = true
-            location.reload();
-            break;
-          case 'VERSION_INSTALLATION_FAILED':
-            this.versionCheck = 'Error installing new version'
-            console.log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
-            break;
-          case 'NO_NEW_VERSION_DETECTED':
-            this.versionCheck = 'Ready to go!'
-            this.versionReady = true
-            console.log("You are on the latest version");
-            break;
-        }
-      });
-
-    }
+   
+   
   }
   async ngOnInit() {
-    await this.initializeApp();
-    //  let audioPlayer = <HTMLVideoElement> document.getElementById("myVideo");
-    //  audioPlayer.play();
-    if (this.updates.isEnabled && environment.production && this.isDesktop) {
-      this.versionCheck = 'Checking Version...'
-      await this.updates.checkForUpdate();
-    } else {
-      this.versionReady = true
-    }
+    
   }
   updateServiceWorker(registration) {
     const installingWorker = registration.installing;
@@ -93,10 +51,7 @@ export class PreloadingPage implements OnInit {
   }
   ionViewDidLoad(): void {
   }
-  async initializeApp() {
-    await this.platform.ready();
-    //await this.localizationService.setInitialAppLanguage();
-  }
+
   movetohome() {
    this.navCtrl.navigateRoot("/home");
 //this.navCtrl.navigateRoot('no/no');

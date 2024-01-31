@@ -15,7 +15,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/sandbox/preloading',
+    redirectTo: '/start',
     pathMatch: 'full',
   },
   {
@@ -41,6 +41,14 @@ export const routes: Routes = [
   {
     path: 'investigate/outro',
     loadComponent: () => import('./investigate/outro/outro.page').then( m => m.OutroPage)
+  },
+  {
+    path: 'preflight',
+    loadComponent: () => import('./preflight/preflight.page').then( m => m.PreflightPage)
+  },
+  {
+    path: 'start',
+    loadComponent: () => import('./start/start.page').then( m => m.StartPage)
   },
 
 

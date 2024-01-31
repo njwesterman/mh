@@ -1,0 +1,15 @@
+<div class="start-page" *ngIf="this.gs.versionReady">
+  <div class="start-page__container">
+    <div class="start-page__hero-image">
+      <img src="../assets/start/mighty_heroes_game_title.png" />
+    </div>
+    <div class="start-page__start-button">
+      <app-button
+        (click)="startGame()"
+        [buttonType]="'c-btn-primary'"
+        [width]="'500px'"
+        [buttonText]="versionCheck"
+      ></app-button>
+    </div>
+  </div>
+</div>
